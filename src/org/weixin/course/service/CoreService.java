@@ -9,6 +9,7 @@ import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
 import org.weixin.course.message.ntil.MessageUtil;
 import org.weixin.course.message.resp.TextMessage;
+import org.weixin.course.servlet.MenuContent;
 import org.weixin.course.servlet.SignUtil;
 /**
  * 核心服务类
@@ -54,6 +55,8 @@ public class CoreService {
 			String toUserName = requestMap.get("ToUserName");
 			// 消息类型
 			String msgType = requestMap.get("MsgType");
+			// 消息内容
+			String reqContent = requestMap.get("Content");
 
 			// 回复文本消息
 			TextMessage textMessage = new TextMessage();
@@ -61,11 +64,18 @@ public class CoreService {
 			textMessage.setFromUserName(toUserName);
 			textMessage.setCreateTime(new Date().getTime());
 			textMessage.setMsgType(MessageUtil.RESP_MESSAGE_TYPE_TEXT);
-			textMessage.setMsgId(0);
+			textMessage.setFuncFlag(0);
 
 			// 文本消息
 			if (msgType.equals(MessageUtil.REQ_MESSAGE_TYPE_TEXT)) {
-				respContent = "您发送的是文本消息！";
+				
+//				LOGGER.warn("reqContent == "+reqContent);
+				
+				if (reqContent != null && reqContent.equals("？")) { 
+					respContent = MenuContent.getMainMenu();
+				} else {
+					respContent = "您发送的是文本消息！";
+				}
 			}
 			// 图片消息
 			else if (msgType.equals(MessageUtil.REQ_MESSAGE_TYPE_IMAGE)) {

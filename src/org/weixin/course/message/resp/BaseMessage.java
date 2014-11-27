@@ -10,14 +10,14 @@ public class BaseMessage {
 	// 消息类型（text/music/news）
 	private String MsgType;
 	// 位0x0001被标志时，星标刚收到的消息
-	private int MsgId;
+	private int funcFlag;
 
-	public int getMsgId() {
-		return MsgId;
+	public int getFuncFlag() {
+		return funcFlag;
 	}
 
-	public void setMsgId(int msgId) {
-		MsgId = msgId;
+	public void setFuncFlag(int funcFlag) {
+		this.funcFlag = funcFlag;
 	}
 
 	public String getToUserName() {
