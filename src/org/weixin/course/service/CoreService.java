@@ -9,7 +9,8 @@ import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
 import org.weixin.course.message.ntil.MessageUtil;
 import org.weixin.course.message.resp.TextMessage;
-import org.weixin.course.servlet.MenuContent;
+import org.weixin.course.service.content.MenuContent;
+import org.weixin.course.service.content.TodayInHistoryService;
 import org.weixin.course.servlet.SignUtil;
 /**
  * 核心服务类
@@ -71,8 +72,10 @@ public class CoreService {
 				
 //				LOGGER.warn("reqContent == "+reqContent);
 				
-				if (reqContent != null && reqContent.equals("？")) { 
+				if (reqContent.equals("？")) { 
 					respContent = MenuContent.getMainMenu();
+				} else if (reqContent.equals("6")) {
+					respContent = TodayInHistoryService.getTodayInHistoryInfo();
 				} else {
 					respContent = "您发送的是文本消息！";
 				}
