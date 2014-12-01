@@ -12,7 +12,7 @@ public class MenuContent {
 		buffer.append("您好，我是聪明的熊大，请回复数字选择服务：").append("\n\n");
 		buffer.append("1  天气预报").append("\n");
 		buffer.append("2  公交查询").append("\n");
-		buffer.append("3  周边搜索").append("\n");
+		buffer.append("3  彩票查询").append("\n");
 		buffer.append("4  歌曲点播").append("\n");
 //		buffer.append("5  经典游戏").append("\n");
 		buffer.append("<a href=\"http://wzcx.runsky.com\">5 违章查询</a>").append("\n");

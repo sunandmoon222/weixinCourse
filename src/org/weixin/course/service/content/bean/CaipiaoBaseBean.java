@@ -10,6 +10,16 @@ public class CaipiaoBaseBean {
 	private String bonusAmount = "";
 	//开奖日期
 	private String openTime = "";
+	//更新日期
+	private String updateDate = "";
+	
+	public String getUpdateDate() {
+		return updateDate;
+	}
+
+	public void setUpdateDate(String updateDate) {
+		this.updateDate = updateDate;
+	}
 
 	public String getId() {
 		return id;

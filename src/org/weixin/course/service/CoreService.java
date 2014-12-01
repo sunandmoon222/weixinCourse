@@ -9,6 +9,7 @@ import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
 import org.weixin.course.message.ntil.MessageUtil;
 import org.weixin.course.message.resp.TextMessage;
+import org.weixin.course.service.content.CaipiaoService;
 import org.weixin.course.service.content.MenuContent;
 import org.weixin.course.service.content.TodayInHistoryService;
 import org.weixin.course.servlet.SignUtil;
@@ -74,8 +75,13 @@ public class CoreService {
 				
 				if (reqContent.equals("？")) { 
 					respContent = MenuContent.getMainMenu();
+
+				//历史上的今天
 				} else if (reqContent.equals("6")) {
 					respContent = TodayInHistoryService.getTodayInHistoryInfo();
+				// 彩票查询
+				} else if (reqContent.equals("3")) {
+					respContent = CaipiaoService.getCaipiaoInfo();
 				} else {
 					respContent = "您发送的是文本消息！";
 				}

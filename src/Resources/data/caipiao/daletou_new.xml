@@ -1,14 +1,15 @@
 <org.weixin.course.service.content.bean.DaletouBean>
-  <winningNumAdd>0</winningNumAdd>
-  <bonusAmountAdd>0</bonusAmountAdd>
-  <winningNum__2>43</winningNum__2>
-  <bonusAmount__2>307985</bonusAmount__2>
+  <winningNumAdd>1</winningNumAdd>
+  <bonusAmountAdd>4765311</bonusAmountAdd>
+  <winningNum__2>61</winningNum__2>
+  <bonusAmount__2>137838</bonusAmount__2>
   <winningNumAdd__2>7</winningNumAdd__2>
-  <bonusAmountAdd__2>184791</bonusAmountAdd__2>
-  <resultNum__red>01 19 20 25 34</resultNum__red>
-  <resultNum__blue>07 12</resultNum__blue>
-  <id>14140</id>
-  <winningNum>1</winningNum>
-  <bonusAmount>10000000</bonusAmount>
-  <openTime>2014-11-29</openTime>
+  <bonusAmountAdd__2>82702</bonusAmountAdd__2>
+  <resultNum__red>04 17 20 26 29</resultNum__red>
+  <resultNum__blue>05 08</resultNum__blue>
+  <id>14141</id>
+  <winningNum>5</winningNum>
+  <bonusAmount>7942185</bonusAmount>
+  <openTime>2014-12-01</openTime>
+  <updateDate>2014-12-01 22:17:07</updateDate>
 </org.weixin.course.service.content.bean.DaletouBean>
