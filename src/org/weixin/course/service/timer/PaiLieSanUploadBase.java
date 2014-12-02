@@ -17,7 +17,7 @@ import java.util.List;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
-import org.weixin.course.service.content.bean.DaletouBean;
+import org.weixin.course.service.content.bean.PailiesanBean;
 
 import com.thoughtworks.xstream.XStream;
 
@@ -28,14 +28,13 @@ import com.thoughtworks.xstream.XStream;
  * @date 2014-12-01
  * 
  */
-public class DaletouUploadBase {
+public class PaiLieSanUploadBase {
 
-	private List<DaletouBean> dataList = new ArrayList<DaletouBean>();
-	private final static String filePath = System.getProperty("user.dir") + "\\src\\Resources\\data\\caipiao\\daletou.xml";
-	private final String url = "http://www.lottery.gov.cn/lottery/dlt/History.aspx?p=";
-	private final int pageNum = 24;
+	private List<PailiesanBean> dataList = new ArrayList<PailiesanBean>();
+	private final static String filePath = System.getProperty("user.dir") + "\\src\\Resources\\data\\caipiao\\pailiesan.xml";
+	private final String url = "http://www.lottery.gov.cn/lottery/pls/History.aspx?p=";
+	private final int pageNum = 74;
 	private final String dateFormate = "yyyy-MM-dd HH:mm:ss";
-	
 	
 	/**
 	 * 发起http get请求获取网页源代码
@@ -86,37 +85,49 @@ public class DaletouUploadBase {
 	 * @return
 	 */
 	private void extract(String html) {
-
 		DateFormat format = new SimpleDateFormat(dateFormate);
 		
 		String strTemp = null;
-		Pattern p = Pattern.compile("(.*)(追加奖金</td>\\s+</tr>)(.*)</TABLE>.*");
+		Pattern p = Pattern.compile("(.*)(奖金</TD>\\s+</TR>)(.*)</TABLE>\\s+</TD>.*");
 		Matcher m = p.matcher(html);
 		while (m.find()) {
 			strTemp = m.group(3);
 		}
-		String[] data = strTemp.split("</tr>");
+		String[] data = strTemp.split("</TR>");
 
 		for (int i = 0; i < data.length - 1; i++) {
 
-			DaletouBean bean = new DaletouBean();
+			PailiesanBean bean = new PailiesanBean();
 			String dataTemp = data[i].replace("    ", "")
-									 .replaceAll("</?[^>]+>", "&").replaceAll("&+", "&")
-									 .replaceAll("&\\s\\+\\s&", "&");
-			String[] dataTemp1 = dataTemp.substring(1, dataTemp.length() - 1).split("&");
-			bean.setId(dataTemp1[0]);
-			bean.setResultNum_red(dataTemp1[1]);
-			bean.setResultNum_blue(dataTemp1[2]);
-			bean.setWinningNum(dataTemp1[3]);
-			bean.setBonusAmount(dataTemp1[4]);
-			bean.setWinningNumAdd(dataTemp1[5]);
-			bean.setBonusAmountAdd(dataTemp1[6]);
-			bean.setWinningNum_2(dataTemp1[7]);
-			bean.setBonusAmount_2(dataTemp1[8]);
-			bean.setWinningNumAdd_2(dataTemp1[9]);
-			bean.setBonusAmountAdd_2(dataTemp1[10]);
-			bean.setOpenTime(dataTemp1[11]);
-			bean.setUpdateDate(format.format(new Date()));
+									 .replace(",", "")
+									 .replaceAll("</?[^>]+>", "#").replaceAll("#+", "#")
+									 .replaceAll("#\\s\\+\\s&", "#")
+									 .replace("&nbsp;,", "")
+									 .replace("&nbsp;", "");
+			String[] dataTemp1 = dataTemp.substring(1, dataTemp.length() - 1).split("#");
+			if ("13321".equals(dataTemp1[0])) {
+				bean.setId(dataTemp1[0]);
+				bean.setResultNum(dataTemp1[1]);
+				bean.setWinningNum(dataTemp1[2]);
+				bean.setBonusAmount(dataTemp1[3]);
+				bean.setWinningNum_Three(dataTemp1[4]);
+				bean.setBonusAmount_Three(dataTemp1[5]);
+				bean.setWinningNum_Six("0");
+				bean.setBonusAmount_Six(dataTemp1[6]);
+				bean.setOpenTime(dataTemp1[7]);
+				bean.setUpdateDate(format.format(new Date()));
+			} else {
+				bean.setId(dataTemp1[0]);
+				bean.setResultNum(dataTemp1[1]);
+				bean.setWinningNum(dataTemp1[2]);
+				bean.setBonusAmount(dataTemp1[3]);
+				bean.setWinningNum_Three(dataTemp1[4]);
+				bean.setBonusAmount_Three(dataTemp1[5]);
+				bean.setWinningNum_Six(dataTemp1[6]);
+				bean.setBonusAmount_Six(dataTemp1[7]);
+				bean.setOpenTime(dataTemp1[8]);
+				bean.setUpdateDate(format.format(new Date()));
+			}
 			dataList.add(bean);
 		}
 
@@ -169,8 +180,8 @@ public class DaletouUploadBase {
 	 * @param args
 	 */
 	public static void main(String[] args) {
-		DaletouUploadBase daletouUploadBase = new DaletouUploadBase();
-		daletouUploadBase.makeCaipiaoInfo();
+		PaiLieSanUploadBase paiLiesSanUploadBase = new PaiLieSanUploadBase();
+		paiLiesSanUploadBase.makeCaipiaoInfo();
 		System.out.print("success~~~");
 	}
 }

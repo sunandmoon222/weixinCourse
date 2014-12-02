@@ -24,8 +24,7 @@ public class CaipiaoService {
 	private final static String filePath = "/alidata/server/tomcat7/webapps/weixinCourse/WEB-INF/classes/Resources/data/caipiao/daletou_new.xml";
 	private final static String appName = "超级大乐透"; 
 	
-	public static String getCaipiaoInfo() {
-		
+	private static String getDaletouInfo() {
 		StringBuffer buffer = new StringBuffer();
 		DaletouBean bean = new DaletouBean();
 		XStream xs = new XStream(new DomDriver());
@@ -56,6 +55,16 @@ public class CaipiaoService {
 			e.printStackTrace();
 		}
 		input = null;
+		return buffer.toString();
+	}
+	
+	public static String getCaipiaoInfo() {
+		
+		String strDaletou = getDaletouInfo();
+		
+		StringBuffer buffer = new StringBuffer();
+		buffer.append(strDaletou);
+
 		return buffer.toString();
 	}
 	

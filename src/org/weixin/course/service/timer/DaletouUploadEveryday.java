@@ -37,6 +37,7 @@ public class DaletouUploadEveryday {
 	private DaletouBean bean = new DaletouBean();
 	private final static String filePath = System.getProperty("user.dir") + "\\src\\Resources\\data\\caipiao\\daletou.xml";
 	private final static String filePath_1 = System.getProperty("user.dir") + "\\src\\Resources\\data\\caipiao\\daletou_new.xml";
+	private final static String url = "http://www.lottery.gov.cn/lottery/dlt/History.aspx";
 	private final String dateFormate = "yyyy-MM-dd HH:mm:ss";
 	
 	/**
@@ -156,7 +157,7 @@ public class DaletouUploadEveryday {
 	public void makeCaipiaoInfo() {
 		
 		// 获取网页源代码
-		String html = httpRequest("http://www.lottery.gov.cn/lottery/dlt/History.aspx");
+		String html = httpRequest(url);
 		// 从网页中抽取信息
 		extract(html);
 			
