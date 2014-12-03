@@ -81,7 +81,9 @@ public class CoreService {
 					respContent = TodayInHistoryService.getTodayInHistoryInfo();
 				// 彩票查询
 				} else if (reqContent.equals("3")) {
-					respContent = CaipiaoService.getCaipiaoInfo();
+					respContent = CaipiaoService.getFuLiCaipiaoInfo();
+				} else if (reqContent.equals("4")) {
+					respContent = CaipiaoService.getSportsCaipiaoInfo();
 				} else {
 					respContent = "您发送的是文本消息！";
 				}

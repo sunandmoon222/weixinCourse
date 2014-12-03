@@ -9,8 +9,10 @@ import java.io.InputStream;
 import org.weixin.course.service.content.bean.DaletouBean;
 import org.weixin.course.service.content.bean.PailieFiveBean;
 import org.weixin.course.service.content.bean.PailiesanBean;
+import org.weixin.course.service.content.bean.SevenHappyBean;
 import org.weixin.course.service.content.bean.SevenStarBean;
 import org.weixin.course.service.content.bean.ShuangSeQiuBean;
+import org.weixin.course.service.content.bean.ThreeDBean;
 import org.weixin.course.service.timer.Constant;
 
 import com.thoughtworks.xstream.XStream;
@@ -24,12 +26,6 @@ import com.thoughtworks.xstream.io.xml.DomDriver;
  * 
  */
 public class CaipiaoService {
-
-	private final static String appName_daletou = "超级大乐透";
-	private final static String appName_pailiesan = "排列三"; 
-	private final static String appName_pailiefive = "排列五"; 
-	private final static String appName_sevenstar = "七星彩";
-	private final static String appName_shuangseqiu = "双色球";
 	
 	private static String getDaletouInfo() {
 		StringBuffer buffer = new StringBuffer();
@@ -47,7 +43,9 @@ public class CaipiaoService {
 		
 		xs.fromXML(input, bean);
 		
-		buffer.append(appName_daletou+"(期号:"+bean.getId()+")").append("\n")
+		buffer.append(Constant.CAIPIAO_NAME_DALETOU).append("\n")
+			  .append("期号:"+bean.getId()).append("\n")
+		  	  .append("开奖日期：").append(bean.getOpenTime()).append("\n")
 			  .append("中奖号码：").append("\n")
 			  .append("红球：").append(bean.getResultNum_red()).append("\n")
 			  .append("蓝球：").append(bean.getResultNum_blue()).append("\n")
@@ -81,7 +79,9 @@ public class CaipiaoService {
 		
 		xs.fromXML(input, bean);
 		
-		buffer.append(appName_pailiesan+"(期号:"+bean.getId()+")").append("\n")
+		buffer.append(Constant.CAIPIAO_NAME_PAILIESAN).append("\n")
+			  .append("期号:"+bean.getId()).append("\n")
+		  	  .append("开奖日期：").append(bean.getOpenTime()).append("\n")
 			  .append("中奖号码：").append(bean.getResultNum());
 
 		try {
@@ -109,7 +109,9 @@ public class CaipiaoService {
 		
 		xs.fromXML(input, bean);
 		
-		buffer.append(appName_pailiefive+"(期号:"+bean.getId()+")").append("\n")
+		buffer.append(Constant.CAIPIAO_NAME_PAILIEFIVE).append("\n")
+			  .append("期号:"+bean.getId()).append("\n")
+			  .append("开奖日期：").append(bean.getOpenTime()).append("\n")
 			  .append("中奖号码：").append(bean.getResultNum());
 
 		try {
@@ -137,7 +139,9 @@ public class CaipiaoService {
 		
 		xs.fromXML(input, bean);
 		
-		buffer.append(appName_sevenstar+"(期号:"+bean.getId()+")").append("\n")
+		buffer.append(Constant.CAIPIAO_NAME_SEVENSTAR).append("\n")
+			  .append("期号:"+bean.getId()).append("\n")
+			  .append("开奖日期：").append(bean.getOpenTime()).append("\n")
 			  .append("中奖号码：").append(bean.getResultNum());
 
 		try {
@@ -165,10 +169,48 @@ public class CaipiaoService {
 		
 		xs.fromXML(input, bean);
 		
-		buffer.append(appName_shuangseqiu+"(期号:"+bean.getId()+")").append("\n")
+		buffer.append(Constant.CAIPIAO_NAME_SHUANGSEQIU).append("\n")
+			  .append("期号:"+bean.getId()).append("\n")
+		  	  .append("开奖日期：").append(bean.getOpenTime()).append("\n")
 			  .append("中奖号码：").append("\n")
 			  .append(" 红球："+bean.getResultNum_red()).append("\n")
 			  .append(" 蓝球："+bean.getResultNum_blue()).append("\n")
+			  .append("一等奖中奖人数：").append(bean.getWinningNum()).append("\n")
+			  .append("一等奖中奖金额：").append(bean.getBonusAmount()).append("\n\n")
+			  .append("二等奖中奖人数：").append(bean.getWinningNum_2()).append("\n")
+			  .append("二等奖中奖金额：").append(bean.getBonusAmount_2()).append("\n\n")
+			  .append(bean.getMesseage()).append("\n\n");
+
+		try {
+			input.close();
+		} catch (IOException e) {
+			e.printStackTrace();
+		}
+		input = null;
+		return buffer.toString();
+	}
+	
+	private static String getSevenHappyInfo() {
+		StringBuffer buffer = new StringBuffer();
+		SevenHappyBean bean = new SevenHappyBean();
+		XStream xs = new XStream(new DomDriver());
+		
+		File file = new File(Constant.getSevenHappyPath_New());
+		InputStream input = null;
+		try {
+			input = new FileInputStream(file);
+
+		} catch (FileNotFoundException e) {
+			e.printStackTrace();
+		} 
+		
+		xs.fromXML(input, bean);
+		
+		buffer.append(Constant.CAIPIAO_NAME_SEVEN_HAPPY).append("\n")
+			  .append("期号:"+bean.getId()).append("\n")
+		  	  .append("开奖日期：").append(bean.getOpenTime()).append("\n")
+			  .append("基本号码："+bean.getResultNum()).append("\n")
+			  .append("特别号码："+bean.getResultNum_add()).append("\n")
 			  .append("一等奖中奖人数：").append(bean.getWinningNum()).append("\n")
 			  .append("一等奖中奖金额：").append(bean.getBonusAmount()).append("\n\n")
 			  .append("二等奖中奖人数：").append(bean.getWinningNum_2()).append("\n")
@@ -184,20 +226,62 @@ public class CaipiaoService {
 		return buffer.toString();
 	}
 	
-	public static String getCaipiaoInfo() {
+	private static String getThreeDInfo() {
+		StringBuffer buffer = new StringBuffer();
+		ThreeDBean bean = new ThreeDBean();
+		XStream xs = new XStream(new DomDriver());
+		
+		File file = new File(Constant.getThreeDPath_New());
+		InputStream input = null;
+		try {
+			input = new FileInputStream(file);
+
+		} catch (FileNotFoundException e) {
+			e.printStackTrace();
+		} 
+		
+		xs.fromXML(input, bean);
+		
+		buffer.append(Constant.CAIPIAO_NAME_THREE_D).append("\n")
+			  .append("期号:"+bean.getId()).append("\n")
+		  	  .append("开奖日期：").append(bean.getOpenTime()).append("\n")
+			  .append("中奖号码：").append(bean.getResultNum()).append("\n\n");
+
+		try {
+			input.close();
+		} catch (IOException e) {
+			e.printStackTrace();
+		}
+		input = null;
+		return buffer.toString();
+	}
+	
+	public static String getFuLiCaipiaoInfo() {
+
+		String strThreeD = getThreeDInfo();
+		String strShuangSeQiu = getShuangSeQiuInfo();
+		String strSevenHappy = getSevenHappyInfo();
+		
+		StringBuffer buffer = new StringBuffer();
+		buffer.append(strThreeD)
+			  .append(strShuangSeQiu)
+			  .append(strSevenHappy);
+
+		return buffer.toString();
+	}
+	
+	public static String getSportsCaipiaoInfo() {
 		
 		String strDaletou = getDaletouInfo();
 		String strPaiLieSan = getPaiLieSanInfo();
 		String strPaiLieFive = getPaiLieFiveInfo();
 		String strSevenStar = getSevenStarInfo();
-		String strShuangSeQiu = getShuangSeQiuInfo();
 		
 		StringBuffer buffer = new StringBuffer();
 		buffer.append(strDaletou).append("\n\n")
 			  .append(strPaiLieSan).append("\n\n")
 			  .append(strPaiLieFive).append("\n\n")
-			  .append(strSevenStar).append("\n\n")
-			  .append(strShuangSeQiu);
+			  .append(strSevenStar);
 
 		return buffer.toString();
 	}
