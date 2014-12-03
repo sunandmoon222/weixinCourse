@@ -73,7 +73,7 @@ public class CoreService {
 				
 //				LOGGER.warn("reqContent == "+reqContent);
 				
-				if (reqContent.equals("？")) { 
+				if (reqContent.equals("？") || reqContent.equals("?")) { 
 					respContent = MenuContent.getMainMenu();
 
 				//历史上的今天

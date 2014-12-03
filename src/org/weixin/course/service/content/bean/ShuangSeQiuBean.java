@@ -3,23 +3,77 @@ package org.weixin.course.service.content.bean;
 
 public class ShuangSeQiuBean extends CaipiaoBaseBean {
 
-	//一等奖追加中奖数目
-	private String winningNumAdd = "";
-	//一等奖追加中奖金额
-	private String bonusAmountAdd = "";
 	//二等奖中奖数目
 	private String winningNum_2 = "";
 	//二等奖中奖金额
 	private String bonusAmount_2 = "";
-	//二等奖追加中奖数目
-	private String winningNumAdd_2 = "";
-	//二等奖追加中奖金额
-	private String bonusAmountAdd_2 = "";
+	//奖池金额
+	private String remaindBounus = "";
+	//本期销量
+	private String salesTotals = "";
 	//开奖号码 红号
 	private String resultNum_red = "";
 	//开奖号码 蓝号
 	private String resultNum_blue = "";	
-	
+	//快乐星期天
+	private String resultNum_happy = "";	
+	//信息
+	private String messeage = "";	
+	/**
+	 * @return the messeage
+	 */
+	public String getMesseage() {
+		return messeage;
+	}
+
+	/**
+	 * @param messeage the messeage to set
+	 */
+	public void setMesseage(String messeage) {
+		this.messeage = messeage;
+	}
+
+	/**
+	 * @return the remaindBounus
+	 */
+	public String getRemaindBounus() {
+		return remaindBounus;
+	}
+
+	/**
+	 * @param remaindBounus the remaindBounus to set
+	 */
+	public void setRemaindBounus(String remaindBounus) {
+		this.remaindBounus = remaindBounus;
+	}
+
+	/**
+	 * @return the salesTotals
+	 */
+	public String getSalesTotals() {
+		return salesTotals;
+	}
+
+	/**
+	 * @param salesTotals the salesTotals to set
+	 */
+	public void setSalesTotals(String salesTotals) {
+		this.salesTotals = salesTotals;
+	}
+	/**
+	 * @return the resultNum_happy
+	 */
+	public String getResultNum_happy() {
+		return resultNum_happy;
+	}
+
+	/**
+	 * @param resultNum_happy the resultNum_happy to set
+	 */
+	public void setResultNum_happy(String resultNum_happy) {
+		this.resultNum_happy = resultNum_happy;
+	}
+
 	/**
 	 * @return the resultNum_red
 	 */
@@ -48,31 +102,6 @@ public class ShuangSeQiuBean extends CaipiaoBaseBean {
 		this.resultNum_blue = resultNum_blue;
 	}
 
-	public String getWinningNumAdd() {
-		return winningNumAdd;
-	}
-
-	/**
-	 * @param winningNumAdd the winningNumAdd to set
-	 */
-	public void setWinningNumAdd(String winningNumAdd) {
-		this.winningNumAdd = winningNumAdd;
-	}
-
-	/**
-	 * @return the bonusAmountAdd
-	 */
-	public String getBonusAmountAdd() {
-		return bonusAmountAdd;
-	}
-
-	/**
-	 * @param bonusAmountAdd the bonusAmountAdd to set
-	 */
-	public void setBonusAmountAdd(String bonusAmountAdd) {
-		this.bonusAmountAdd = bonusAmountAdd;
-	}
-
 	/**
 	 * @return the winningNum_2
 	 */
@@ -99,33 +128,5 @@ public class ShuangSeQiuBean extends CaipiaoBaseBean {
 	 */
 	public void setBonusAmount_2(String bonusAmount_2) {
 		this.bonusAmount_2 = bonusAmount_2;
-	}
-
-	/**
-	 * @return the winningNumAdd_2
-	 */
-	public String getWinningNumAdd_2() {
-		return winningNumAdd_2;
-	}
-
-	/**
-	 * @param winningNumAdd_2 the winningNumAdd_2 to set
-	 */
-	public void setWinningNumAdd_2(String winningNumAdd_2) {
-		this.winningNumAdd_2 = winningNumAdd_2;
-	}
-
-	/**
-	 * @return the bonusAmountAdd_2
-	 */
-	public String getBonusAmountAdd_2() {
-		return bonusAmountAdd_2;
-	}
-
-	/**
-	 * @param bonusAmountAdd_2 the bonusAmountAdd_2 to set
-	 */
-	public void setBonusAmountAdd_2(String bonusAmountAdd_2) {
-		this.bonusAmountAdd_2 = bonusAmountAdd_2;
 	}
 }

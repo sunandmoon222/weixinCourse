@@ -5,7 +5,6 @@ import java.io.File;
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
-import java.io.FileReader;
 import java.io.IOException;
 import java.io.InputStream;
 import java.io.InputStreamReader;
@@ -16,7 +15,6 @@ import java.text.DateFormat;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Date;
-import java.util.List;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
@@ -35,10 +33,6 @@ import com.thoughtworks.xstream.io.xml.DomDriver;
 public class DaletouUploadEveryday {
 
 	private DaletouBean bean = new DaletouBean();
-	private final static String filePath = System.getProperty("user.dir") + "\\src\\Resources\\data\\caipiao\\daletou.xml";
-	private final static String filePath_1 = System.getProperty("user.dir") + "\\src\\Resources\\data\\caipiao\\daletou_new.xml";
-	private final static String url = "http://www.lottery.gov.cn/lottery/dlt/History.aspx";
-	private final String dateFormate = "yyyy-MM-dd HH:mm:ss";
 	
 	/**
 	 * 发起http get请求获取网页源代码
@@ -90,7 +84,7 @@ public class DaletouUploadEveryday {
 	 */
 	private void extract(String html) {
 
-		DateFormat format = new SimpleDateFormat(dateFormate);
+		DateFormat format = new SimpleDateFormat(Constant.DATE_FORMAT);
 		
 		String strTemp = null;
 		Pattern p = Pattern.compile("(.*)(追加奖金</td>\\s+</tr>)(.*)</TABLE>.*");
@@ -125,16 +119,16 @@ public class DaletouUploadEveryday {
 		XStream xsBase = new XStream(new DomDriver());
 		// Write to a file in the file system
 		try {
-			OutputStream fs1 = new FileOutputStream(filePath_1);
+			OutputStream fs1 = new FileOutputStream(Constant.getDaLeTouPath_New());
 			xs.toXML(bean, fs1);
 
-			File file = new File(filePath);
+			File file = new File(Constant.getDaLeTouPath());
 			FileInputStream input = new FileInputStream(file);
 			@SuppressWarnings("unchecked")
 			ArrayList<DaletouBean> list = (ArrayList<DaletouBean>)xsBase.fromXML(input);
 			list.add(0, bean);
 
-			OutputStream fs = new FileOutputStream(filePath);
+			OutputStream fs = new FileOutputStream(file);
 			
 			xsBase.toXML(list, fs);
 			
@@ -157,7 +151,7 @@ public class DaletouUploadEveryday {
 	public void makeCaipiaoInfo() {
 		
 		// 获取网页源代码
-		String html = httpRequest(url);
+		String html = httpRequest(Constant.DALETOU_NEW_URL);
 		// 从网页中抽取信息
 		extract(html);
 			

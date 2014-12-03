@@ -31,10 +31,6 @@ import com.thoughtworks.xstream.XStream;
 public class PaiLieSanUploadBase {
 
 	private List<PailiesanBean> dataList = new ArrayList<PailiesanBean>();
-	private final static String filePath = System.getProperty("user.dir") + "\\src\\Resources\\data\\caipiao\\pailiesan.xml";
-	private final String url = "http://www.lottery.gov.cn/lottery/pls/History.aspx?p=";
-	private final int pageNum = 74;
-	private final String dateFormate = "yyyy-MM-dd HH:mm:ss";
 	
 	/**
 	 * 发起http get请求获取网页源代码
@@ -85,7 +81,7 @@ public class PaiLieSanUploadBase {
 	 * @return
 	 */
 	private void extract(String html) {
-		DateFormat format = new SimpleDateFormat(dateFormate);
+		DateFormat format = new SimpleDateFormat(Constant.DATE_FORMAT);
 		
 		String strTemp = null;
 		Pattern p = Pattern.compile("(.*)(奖金</TD>\\s+</TR>)(.*)</TABLE>\\s+</TD>.*");
@@ -138,7 +134,7 @@ public class PaiLieSanUploadBase {
 		XStream xs = new XStream();
 		// Write to a file in the file system
 		try {
-			OutputStream fs = new FileOutputStream(filePath,true);
+			OutputStream fs = new FileOutputStream(Constant.getPaiLieSanPath());
 			xs.toXML(dataList, fs);
 			fs.close();
 			fs = null;
@@ -157,13 +153,13 @@ public class PaiLieSanUploadBase {
 	public void makeCaipiaoInfo() {
 		
 		// 获取网页源代码
-		for (int i = 1; i < pageNum; i++) {
+		for (int i = 1; i < Constant.PAILIE_THREE_BASE_PAGENUM; i++) {
 			
-			String html = httpRequest(url+String.valueOf(i));
+			String html = httpRequest(Constant.PAILIE_THREE_URL+String.valueOf(i));
 			// 从网页中抽取信息
 			extract(html);
 			try {
-				Thread.sleep(2 * 1000);
+				Thread.sleep(Constant.THREAD_SLEEP_TIME * 1000);
 			} catch (InterruptedException e) {
 				e.printStackTrace();
 			}

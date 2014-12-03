@@ -18,7 +18,7 @@ import java.util.Date;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
-import org.weixin.course.service.content.bean.SevenStarBean;
+import org.weixin.course.service.content.bean.ShuangSeQiuBean;
 
 import com.thoughtworks.xstream.XStream;
 import com.thoughtworks.xstream.io.xml.DomDriver;
@@ -30,10 +30,9 @@ import com.thoughtworks.xstream.io.xml.DomDriver;
  * @date 2014-12-01
  * 
  */
-public class SevenStarUploadEveryday {
+public class ShuangSeQiuUploadEveryday {
 
-	private SevenStarBean bean = new SevenStarBean();
-	
+	private ShuangSeQiuBean bean = new ShuangSeQiuBean();
 	
 	/**
 	 * 发起http get请求获取网页源代码
@@ -84,35 +83,50 @@ public class SevenStarUploadEveryday {
 	 * @return
 	 */
 	private void extract(String html) {
-
 		DateFormat format = new SimpleDateFormat(Constant.DATE_FORMAT);
 		
-		String strTemp = null;
-		Pattern p = Pattern.compile("(.*)(奖金\\s+</td>\\s+</tr>)(.*)</TABLE>\\s+</td>.*");
+		String strTemp1 = null;
+		String strTemp2 = null;
+		String strTemp3 = null;
+		String strTemp4 = null;
+		String strTemp5 = null;
+		String strTemp6 = null;
+
+		Pattern p = Pattern.compile(".*<div class=\"drawleft_div_style red draw_line\">(.*)<div class=\"drawright\">.*"
+									+ "<li class=\"caizhong\">(.+元</span>)</li>\\s+<li class=\"haoma3\">(.+</span>)"
+									+ "</li>\\s+</ul>.*一等奖</td>(.*)二等奖</td>(.*)三等奖</td>.*"
+									+ "<div class=\"mt10\">(.*)<div  class=\"page_box clearself mt10\">.*");
 		Matcher m = p.matcher(html);
 		while (m.find()) {
-			strTemp = m.group(3);
+			strTemp1 = m.group(1);
+			strTemp2 = m.group(2);
+			strTemp3 = m.group(3);
+			strTemp4 = m.group(4);
+			strTemp5 = m.group(5);
+			strTemp6 = m.group(6);
 		}
-		String[] data = strTemp.split("</TR>");
 		
-		String dataTemp = data[0].replace("    ", "")
-								 .replace(",", "")
-								 .replaceAll("</?[^>]+>", "#").replaceAll("#+", "#")
-								 .replaceAll("#\\s\\+\\s&", "#")
-								 .replace("&nbsp;,", "")
-								 .replace("&nbsp;", "");
-		String[] dataTemp1 = dataTemp.substring(1, dataTemp.length() - 1).split("#");
+		strTemp1 = strTemp1.replaceAll("</?.+>", "").replaceAll("\\s*", "");
+		strTemp6 = strTemp6.replace("<br>", "").replaceAll("</?.+>", "").replaceAll("\\s*", "");
+		String[] arrTemp2 = strTemp2.replace("<span>", "").replaceAll("</?i>", "").split("</span>");
+		String[] arrTemp3 = strTemp3.replaceAll("<i.*i>", "").replace("<span>", "").replace("<span class=\"blue\">", "").split("</span>");
+		String[] arrTemp4 = strTemp4.replaceAll("</tr.*>", "").replace("<td>", "").replaceAll("\\s*", "").split("</td>");
+		String[] arrTemp5 = strTemp5.replaceAll("</tr.*>", "").replace("<td>", "").replaceAll("\\s*", "").split("</td>");
 		
-		bean.setId(dataTemp1[0]);
-		bean.setResultNum(dataTemp1[1]);
-		bean.setWinningNum(dataTemp1[2]);
-		bean.setBonusAmount(dataTemp1[3]);
-		bean.setWinningNum_2(dataTemp1[4]);
-		bean.setBonusAmount_2(dataTemp1[5]);
-		bean.setWinningNum_3(dataTemp1[6]);
-		bean.setBonusAmount_3(dataTemp1[7]);
-		bean.setOpenTime(dataTemp1[8]);
+    	bean.setId(arrTemp2[0].substring(1, arrTemp2[0].length()-1));
+    	bean.setOpenTime(arrTemp2[1].replaceAll("\\s*", "").replaceAll(".*：", ""));
+    	bean.setSalesTotals(arrTemp2[2].replaceAll("\\s*", "").replaceAll(".*：", ""));
+    	bean.setRemaindBounus(arrTemp2[3].replaceAll("\\s*", "").replaceAll(".*：", ""));
+    	bean.setResultNum_red(arrTemp3[0]+ "  " +arrTemp3[1]+ "  "+arrTemp3[2]+ "  "+arrTemp3[3]+ "  "+arrTemp3[4]+ "  "+arrTemp3[5]);
+    	bean.setResultNum_blue(arrTemp3[6]);
+    	
+    	bean.setWinningNum(arrTemp4[0]);
+    	bean.setBonusAmount(arrTemp4[1]);
+    	bean.setWinningNum_2(arrTemp5[0]);
+    	bean.setBonusAmount_2(arrTemp5[1]);
 		bean.setUpdateDate(format.format(new Date()));
+		bean.setResultNum_happy("-");
+		bean.setMesseage(strTemp6.concat("\n").concat(strTemp1));
 	}
 
 	private void makeXmlData() {
@@ -121,13 +135,13 @@ public class SevenStarUploadEveryday {
 		XStream xsBase = new XStream(new DomDriver());
 		// Write to a file in the file system
 		try {
-			OutputStream fs1 = new FileOutputStream(Constant.getSevenStarPath_New());
+			OutputStream fs1 = new FileOutputStream(Constant.getShuangSeQiuPath_New());
 			xs.toXML(bean, fs1);
 
-			File file = new File(Constant.getSevenStarPath());
+			File file = new File(Constant.getShuangSeQiuPath());
 			FileInputStream input = new FileInputStream(file);
 			@SuppressWarnings("unchecked")
-			ArrayList<SevenStarBean> list = (ArrayList<SevenStarBean>)xsBase.fromXML(input);
+			ArrayList<ShuangSeQiuBean> list = (ArrayList<ShuangSeQiuBean>)xsBase.fromXML(input);
 			list.add(0, bean);
 
 			OutputStream fs = new FileOutputStream(file);
@@ -153,7 +167,7 @@ public class SevenStarUploadEveryday {
 	public void makeCaipiaoInfo() {
 		
 		// 获取网页源代码
-		String html = httpRequest(Constant.SEVEN_STAR_URL_NEW);
+		String html = httpRequest(Constant.SHUANGSEQIU_URL);
 		// 从网页中抽取信息
 		extract(html);
 			
@@ -164,11 +178,10 @@ public class SevenStarUploadEveryday {
 	 * 通过main在本地测试
 	 * 
 	 * @param args
-	 * @throws IOException 
 	 */
-	public static void main(String[] args) throws IOException {
-		SevenStarUploadEveryday sevenStarUploadEveryday = new SevenStarUploadEveryday();
-		sevenStarUploadEveryday.makeCaipiaoInfo();
+	public static void main(String[] args) {
+		ShuangSeQiuUploadEveryday shuangSeQiuUploadEveryday = new ShuangSeQiuUploadEveryday();
+		shuangSeQiuUploadEveryday.makeCaipiaoInfo();
 		System.out.print("success~~~");
 	}
 }

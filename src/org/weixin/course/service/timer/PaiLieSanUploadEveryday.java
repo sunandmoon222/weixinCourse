@@ -33,10 +33,6 @@ import com.thoughtworks.xstream.io.xml.DomDriver;
 public class PaiLieSanUploadEveryday {
 
 	private PailiesanBean bean = new PailiesanBean();
-	private final static String filePath = System.getProperty("user.dir") + "\\src\\Resources\\data\\caipiao\\pailiesan.xml";
-	private final static String filePath_1 = System.getProperty("user.dir") + "\\src\\Resources\\data\\caipiao\\pailiesan_new.xml";
-	private final static String url = "http://www.lottery.gov.cn/lottery/pls/History.aspx";
-	private final String dateFormate = "yyyy-MM-dd HH:mm:ss";
 	
 	/**
 	 * 发起http get请求获取网页源代码
@@ -88,7 +84,7 @@ public class PaiLieSanUploadEveryday {
 	 */
 	private void extract(String html) {
 
-		DateFormat format = new SimpleDateFormat(dateFormate);
+		DateFormat format = new SimpleDateFormat(Constant.DATE_FORMAT);
 		
 		String strTemp = null;
 		Pattern p = Pattern.compile("(.*)(奖金</TD>\\s+</TR>)(.*)</TABLE>\\s+</TD>.*");
@@ -124,16 +120,16 @@ public class PaiLieSanUploadEveryday {
 		XStream xsBase = new XStream(new DomDriver());
 		// Write to a file in the file system
 		try {
-			OutputStream fs1 = new FileOutputStream(filePath_1);
+			OutputStream fs1 = new FileOutputStream(Constant.getPaiLieSanPath_New());
 			xs.toXML(bean, fs1);
 
-			File file = new File(filePath);
+			File file = new File(Constant.getPaiLieSanPath());
 			FileInputStream input = new FileInputStream(file);
 			@SuppressWarnings("unchecked")
 			ArrayList<PailiesanBean> list = (ArrayList<PailiesanBean>)xsBase.fromXML(input);
 			list.add(0, bean);
 
-			OutputStream fs = new FileOutputStream(filePath);
+			OutputStream fs = new FileOutputStream(file);
 			
 			xsBase.toXML(list, fs);
 			
@@ -156,7 +152,7 @@ public class PaiLieSanUploadEveryday {
 	public void makeCaipiaoInfo() {
 		
 		// 获取网页源代码
-		String html = httpRequest(url);
+		String html = httpRequest(Constant.PAILIE_THREE_URL_NEW);
 		// 从网页中抽取信息
 		extract(html);
 			

@@ -19,7 +19,6 @@ import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
 import org.weixin.course.service.content.bean.PailieFiveBean;
-import org.weixin.course.service.content.bean.PailiesanBean;
 
 import com.thoughtworks.xstream.XStream;
 import com.thoughtworks.xstream.io.xml.DomDriver;
@@ -34,10 +33,6 @@ import com.thoughtworks.xstream.io.xml.DomDriver;
 public class PaiLieFiveUploadEveryday {
 
 	private PailieFiveBean bean = new PailieFiveBean();
-	private final static String filePath = System.getProperty("user.dir") + "\\src\\Resources\\data\\caipiao\\pailieFive.xml";
-	private final static String filePath_1 = System.getProperty("user.dir") + "\\src\\Resources\\data\\caipiao\\pailieFive_new.xml";
-	private final static String url = "http://www.lottery.gov.cn/lottery/plw/History.aspx";
-	private final String dateFormate = "yyyy-MM-dd HH:mm:ss";
 	
 	/**
 	 * 发起http get请求获取网页源代码
@@ -89,7 +84,7 @@ public class PaiLieFiveUploadEveryday {
 	 */
 	private void extract(String html) {
 
-		DateFormat format = new SimpleDateFormat(dateFormate);
+		DateFormat format = new SimpleDateFormat(Constant.DATE_FORMAT);
 		
 		String strTemp = null;
 		Pattern p = Pattern.compile("(.*)(奖金</TD>\\s+</TR>)(.*)</TABLE>\\s+</TD>.*");
@@ -121,16 +116,16 @@ public class PaiLieFiveUploadEveryday {
 		XStream xsBase = new XStream(new DomDriver());
 		// Write to a file in the file system
 		try {
-			OutputStream fs1 = new FileOutputStream(filePath_1);
+			OutputStream fs1 = new FileOutputStream(Constant.getPaiLieFivePath_New());
 			xs.toXML(bean, fs1);
 
-			File file = new File(filePath);
+			File file = new File(Constant.getPaiLieFivePath());
 			FileInputStream input = new FileInputStream(file);
 			@SuppressWarnings("unchecked")
 			ArrayList<PailieFiveBean> list = (ArrayList<PailieFiveBean>)xsBase.fromXML(input);
 			list.add(0, bean);
 
-			OutputStream fs = new FileOutputStream(filePath);
+			OutputStream fs = new FileOutputStream(file);
 			
 			xsBase.toXML(list, fs);
 			
@@ -153,7 +148,7 @@ public class PaiLieFiveUploadEveryday {
 	public void makeCaipiaoInfo() {
 		
 		// 获取网页源代码
-		String html = httpRequest(url);
+		String html = httpRequest(Constant.PAILIE_FIVE_URL_NEW);
 		// 从网页中抽取信息
 		extract(html);
 			

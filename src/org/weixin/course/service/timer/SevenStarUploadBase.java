@@ -31,10 +31,6 @@ import com.thoughtworks.xstream.XStream;
 public class SevenStarUploadBase {
 
 	private List<SevenStarBean> dataList = new ArrayList<SevenStarBean>();
-	private final static String filePath = System.getProperty("user.dir") + "\\src\\Resources\\data\\caipiao\\sevenstar.xml";
-	private final String url = "http://www.lottery.gov.cn/lottery/qxc/History.aspx?p=";
-	private final int pageNum = 34;
-	private final String dateFormate = "yyyy-MM-dd HH:mm:ss";
 	
 	/**
 	 * 发起http get请求获取网页源代码
@@ -85,7 +81,7 @@ public class SevenStarUploadBase {
 	 * @return
 	 */
 	private void extract(String html) {
-		DateFormat format = new SimpleDateFormat(dateFormate);
+		DateFormat format = new SimpleDateFormat(Constant.DATE_FORMAT);
 		String strTemp = null;
 		Pattern p = Pattern.compile("(.*)(奖金\\s+</td>\\s+</tr>)(.*)</TABLE>\\s+</td>.*");
 		Matcher m = p.matcher(html);
@@ -126,7 +122,7 @@ public class SevenStarUploadBase {
 		XStream xs = new XStream();
 		// Write to a file in the file system
 		try {
-			OutputStream fs = new FileOutputStream(filePath,true);
+			OutputStream fs = new FileOutputStream(Constant.getSevenStarPath());
 			xs.toXML(dataList, fs);
 			fs.close();
 			fs = null;
@@ -145,13 +141,13 @@ public class SevenStarUploadBase {
 	public void makeCaipiaoInfo() {
 		
 		// 获取网页源代码
-		for (int i = 1; i < pageNum; i++) {
+		for (int i = 1; i < Constant.SEVEN_STAR_BASE_PAGENUM; i++) {
 			
-			String html = httpRequest(url+String.valueOf(i));
+			String html = httpRequest(Constant.SEVEN_STAR_URL+String.valueOf(i));
 			// 从网页中抽取信息
 			extract(html);
 			try {
-				Thread.sleep(2 * 1000);
+				Thread.sleep(Constant.THREAD_SLEEP_TIME * 1000);
 			} catch (InterruptedException e) {
 				e.printStackTrace();
 			}
