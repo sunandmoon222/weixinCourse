@@ -25,6 +25,7 @@ import org.weixin.course.message.resp.Article;
 import org.weixin.course.service.weather.bean.ForecastBeanC;
 import org.weixin.course.service.weather.bean.ForecastBeanF;
 import org.weixin.course.service.weather.bean.IndexBean;
+import org.weixin.course.service.weather.bean.WeatherCode;
 
 import sun.misc.BASE64Encoder;
 
@@ -52,15 +53,18 @@ public class WeatherService {
 		DateFormat format = new SimpleDateFormat(DateFormat);
 		String date = format.format(new Date());
 
+		//data初始化
+		WeatherCode.init();
 		//常规预报数据
 		makeJsonDataForecast(areaId,date);
 		//指数数据
 		makeJsonDataIndex(areaId,date);
 		
-		return makeDataInfo();
+//		return makeDataInfo();
+		return null;
 	}
 	
-	private String makeDataInfo() {
+	public static List<Article> makeDataInfo() {
 		List<Article> articleList = new ArrayList<Article>();
 		
         Article article1 = new Article();  
@@ -85,7 +89,7 @@ public class WeatherService {
         articleList.add(article2);  
         articleList.add(article3); 
         
-		return null;
+		return articleList;
 	}
 	
 	@SuppressWarnings("unchecked")

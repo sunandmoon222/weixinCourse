@@ -32,17 +32,17 @@ public class ConstantCaipiao {
 	
 	//双色球
 	public final static String SHUANGSEQIU_LOCAL_PATH = System.getProperty("user.dir") + "\\src\\Resources\\data\\caipiao\\shuangseqiuData.txt";
-	public final static String SHUANGSEQIU_URL = "http://www.cwl.gov.cn/kjxx/ssq/kjgg/388484.shtml";
+	public final static String SHUANGSEQIU_URL = "http://www.cwl.gov.cn";
 	public final static String CAIPIAO_NAME_SHUANGSEQIU = "双色球";
 	
 	//七乐彩
 	public final static String SEVEN_HAPPY_LOCAL_PATH = System.getProperty("user.dir") + "\\src\\Resources\\data\\caipiao\\sevenhappyData.txt";
-	public final static String SEVEN_HAPPY_URL = "http://www.cwl.gov.cn/kjxx/qlc/kjgg/388500.shtml";
+	public final static String SEVEN_HAPPY_URL = "http://www.cwl.gov.cn";
 	public final static String CAIPIAO_NAME_SEVEN_HAPPY = "七乐彩";
 	
 	//3D
 	public final static String THREE_D_LOCAL_PATH = System.getProperty("user.dir") + "\\src\\Resources\\data\\caipiao\\threeDData.txt";
-	public final static String THREE_D_URL = "http://www.cwl.gov.cn/kjxx/fc3d/kjgg/388499.shtml";
+	public final static String THREE_D_URL = "http://www.cwl.gov.cn";
 	public final static String CAIPIAO_NAME_THREE_D = "3D";
 	
 	public static String getDaLeTouPath() {

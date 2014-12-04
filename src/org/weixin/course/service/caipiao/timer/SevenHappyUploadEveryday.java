@@ -155,6 +155,19 @@ public class SevenHappyUploadEveryday {
 		}
 	}
 
+	private String getUrlParamter() {
+		String str = null;
+		// 获取网页源代码
+		String html = httpRequest(ConstantCaipiao.SEVEN_HAPPY_URL);
+		
+		Pattern p = Pattern.compile(".*(kjxx/qlc/kjgg/[0-9]{6}.shtml).*");
+		Matcher m = p.matcher(html);
+		while (m.find()) {
+			str = m.group(1);
+		}
+		return str;
+	}
+	
 	/**
 	 * 彩票查询方法，供外部调用
 	 * 
@@ -162,8 +175,9 @@ public class SevenHappyUploadEveryday {
 	 */
 	public void makeCaipiaoInfo() {
 		
+		String urlParamter = getUrlParamter();
 		// 获取网页源代码
-		String html = httpRequest(ConstantCaipiao.SEVEN_HAPPY_URL);
+		String html = httpRequest(ConstantCaipiao.SEVEN_HAPPY_URL+"/"+urlParamter);
 		// 从网页中抽取信息
 		extract(html);
 			

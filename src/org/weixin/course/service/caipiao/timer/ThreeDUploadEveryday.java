@@ -132,6 +132,19 @@ public class ThreeDUploadEveryday {
 		}
 	}
 
+	private String getUrlParamter() {
+		String str = null;
+		// 获取网页源代码
+		String html = httpRequest(ConstantCaipiao.THREE_D_URL);
+		
+		Pattern p = Pattern.compile(".*(kjxx/fc3d/kjgg/[0-9]{6}.shtml).*");
+		Matcher m = p.matcher(html);
+		while (m.find()) {
+			str = m.group(1);
+		}
+		return str;
+	}
+	
 	/**
 	 * 彩票查询方法，供外部调用
 	 * 
@@ -139,8 +152,10 @@ public class ThreeDUploadEveryday {
 	 */
 	public void makeCaipiaoInfo() {
 		
+		String urlParamter = getUrlParamter();
+		
 		// 获取网页源代码
-		String html = httpRequest(ConstantCaipiao.THREE_D_URL);
+		String html = httpRequest(ConstantCaipiao.THREE_D_URL+"/"+urlParamter);
 		// 从网页中抽取信息
 		extract(html);
 			

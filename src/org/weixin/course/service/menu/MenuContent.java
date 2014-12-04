@@ -14,7 +14,6 @@ public class MenuContent {
 		buffer.append("2  公交查询").append("\n");
 		buffer.append("3  彩票查询").append("\n");
 		buffer.append("4  体育彩票").append("\n");
-//		buffer.append("5  经典游戏").append("\n");
 		buffer.append("<a href=\"http://wzcx.runsky.com\">5 违章查询</a>").append("\n");
 		buffer.append("6 历史上的今天").append("\n");
 		buffer.append("7  人脸识别").append("\n");

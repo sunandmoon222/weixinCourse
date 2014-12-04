@@ -3,11 +3,11 @@ package org.weixin.course.service.weather.bean;
 import java.util.HashMap;
 import java.util.Map;
 
-public class WeatherConstant {
+public class WeatherCode {
 
-	private static WeatherConstant weatherConstant = new WeatherConstant();
+	private static WeatherCode weatherConstant = new WeatherCode();
 
-	private WeatherConstant() {
+	private WeatherCode() {
 	}
 
 	// 风力

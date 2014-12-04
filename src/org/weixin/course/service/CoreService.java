@@ -1,6 +1,5 @@
 package org.weixin.course.service;
 
-import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
 import java.util.Map;
@@ -16,6 +15,7 @@ import org.weixin.course.message.resp.TextMessage;
 import org.weixin.course.service.caipiao.CaipiaoService;
 import org.weixin.course.service.history.TodayInHistoryService;
 import org.weixin.course.service.menu.MenuContent;
+import org.weixin.course.service.weather.WeatherService;
 import org.weixin.course.servlet.SignUtil;
 /**
  * 核心服务类
@@ -92,11 +92,14 @@ public class CoreService {
 	                newsMessage.setMsgType(MessageUtil.RESP_MESSAGE_TYPE_NEWS);  
 	                newsMessage.setFuncFlag(0);
 	                
-	                List<Article> articleList = new ArrayList<Article>();
+	                List<Article> articleList = WeatherService.makeDataInfo();
 	                 
                     newsMessage.setArticleCount(articleList.size());  
                     newsMessage.setArticles(articleList);  
-                    respMessage = MessageUtil.newsMessageToXml(newsMessage); 
+                    
+                    respMessage = SignUtil.encryptMsg(MessageUtil.newsMessageToXml(newsMessage), nonce, timestamp);
+                    
+                    return respMessage;
 	                
 				// 福利彩票查询
 				} else if (reqContent.equals("3")) {
