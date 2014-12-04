@@ -1,6 +1,8 @@
 package org.weixin.course.service;
 
+import java.util.ArrayList;
 import java.util.Date;
+import java.util.List;
 import java.util.Map;
 
 import javax.servlet.http.HttpServletRequest;
@@ -8,10 +10,12 @@ import javax.servlet.http.HttpServletRequest;
 import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
 import org.weixin.course.message.ntil.MessageUtil;
+import org.weixin.course.message.resp.Article;
+import org.weixin.course.message.resp.NewsMessage;
 import org.weixin.course.message.resp.TextMessage;
-import org.weixin.course.service.content.CaipiaoService;
-import org.weixin.course.service.content.MenuContent;
-import org.weixin.course.service.content.TodayInHistoryService;
+import org.weixin.course.service.caipiao.CaipiaoService;
+import org.weixin.course.service.history.TodayInHistoryService;
+import org.weixin.course.service.menu.MenuContent;
 import org.weixin.course.servlet.SignUtil;
 /**
  * 核心服务类
@@ -76,15 +80,34 @@ public class CoreService {
 				if (reqContent.equals("？") || reqContent.equals("?")) { 
 					respContent = MenuContent.getMainMenu();
 
+				// 天气查询
+				} else if (reqContent.equals("1")) {
+					
+					// 创建图文消息  
+	                NewsMessage newsMessage = new NewsMessage();
+	                
+	                newsMessage.setToUserName(fromUserName);  
+	                newsMessage.setFromUserName(toUserName);  
+	                newsMessage.setCreateTime(new Date().getTime());  
+	                newsMessage.setMsgType(MessageUtil.RESP_MESSAGE_TYPE_NEWS);  
+	                newsMessage.setFuncFlag(0);
+	                
+	                List<Article> articleList = new ArrayList<Article>();
+	                 
+                    newsMessage.setArticleCount(articleList.size());  
+                    newsMessage.setArticles(articleList);  
+                    respMessage = MessageUtil.newsMessageToXml(newsMessage); 
+	                
+				// 福利彩票查询
+				} else if (reqContent.equals("3")) {
+					respContent = CaipiaoService.getFuLiCaipiaoInfo();
+				//体育彩票查询 
+				} else if (reqContent.equals("4")) {
+					respContent = CaipiaoService.getSportsCaipiaoInfo();
 				//历史上的今天
 				} else if (reqContent.equals("6")) {
 					respContent = TodayInHistoryService.getTodayInHistoryInfo();
-				// 彩票查询
-				} else if (reqContent.equals("3")) {
-					respContent = CaipiaoService.getFuLiCaipiaoInfo();
-				} else if (reqContent.equals("4")) {
-					respContent = CaipiaoService.getSportsCaipiaoInfo();
-				} else {
+				}else {
 					respContent = "您发送的是文本消息！";
 				}
 			}
