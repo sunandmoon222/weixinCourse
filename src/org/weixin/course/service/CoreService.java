@@ -75,32 +75,38 @@ public class CoreService {
 			// 文本消息
 			if (msgType.equals(MessageUtil.REQ_MESSAGE_TYPE_TEXT)) {
 				
-//				LOGGER.warn("reqContent == "+reqContent);
-				
 				if (reqContent.equals("？") || reqContent.equals("?")) { 
 					respContent = MenuContent.getMainMenu();
 
 				// 天气查询
 				} else if (reqContent.equals("1")) {
 					
-					// 创建图文消息  
-	                NewsMessage newsMessage = new NewsMessage();
-	                
-	                newsMessage.setToUserName(fromUserName);  
-	                newsMessage.setFromUserName(toUserName);  
-	                newsMessage.setCreateTime(new Date().getTime());  
-	                newsMessage.setMsgType(MessageUtil.RESP_MESSAGE_TYPE_NEWS);  
-	                newsMessage.setFuncFlag(0);
-	                
-	                List<Article> articleList = WeatherService.makeDataInfo();
-	                 
-                    newsMessage.setArticleCount(articleList.size());  
-                    newsMessage.setArticles(articleList);  
-                    
-                    respMessage = SignUtil.encryptMsg(MessageUtil.newsMessageToXml(newsMessage), nonce, timestamp);
-                    
-                    return respMessage;
-	                
+					respContent = "\ue04a天气预报使用指南\n\n回复：天气+城市名称\n例如：天气大连\n或者：大连天气\n\n回复“?”显示主菜单";
+					
+				} else if (reqContent.contains("天气")) {
+					
+					List<Article> articleList = WeatherService.getWeatherInfo(reqContent.replaceAll("\\s*", "").replace("天气", ""));
+					
+					if (articleList == null) {
+						respContent = "看不懂，大侠，请按照规定重新输入\n\n回复：天气+城市名称\n例如：天气大连\n或者：大连天气\n\n回复“?”显示主菜单";
+					} else {
+						// 创建图文消息  
+		                NewsMessage newsMessage = new NewsMessage();
+		                
+		                newsMessage.setToUserName(fromUserName);  
+		                newsMessage.setFromUserName(toUserName);  
+		                newsMessage.setCreateTime(new Date().getTime());  
+		                newsMessage.setMsgType(MessageUtil.RESP_MESSAGE_TYPE_NEWS);  
+		                newsMessage.setFuncFlag(0);
+		                
+		                 
+	                    newsMessage.setArticleCount(articleList.size());  
+	                    newsMessage.setArticles(articleList);  
+	                    
+	                    respMessage = SignUtil.encryptMsg(MessageUtil.newsMessageToXml(newsMessage), nonce, timestamp);
+	                    
+	                    return respMessage;						
+					}
 				// 福利彩票查询
 				} else if (reqContent.equals("3")) {
 					respContent = CaipiaoService.getFuLiCaipiaoInfo();

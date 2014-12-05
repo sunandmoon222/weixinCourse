@@ -8,8 +8,11 @@ import java.net.URL;
 import java.net.URLEncoder;
 import java.security.InvalidKeyException;
 import java.text.DateFormat;
+import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.Calendar;
 import java.util.Date;
 import java.util.Iterator;
 import java.util.List;
@@ -31,70 +34,179 @@ import sun.misc.BASE64Encoder;
 
 public class WeatherService {
 
+	private static WeatherService weatherService = new WeatherService();
+	private WeatherService() {
+		
+	}
+	
 	private final static String AppId = "76f661f7c047ddd7";
 	private final static String IndexType = "index_v";
 	private final static String ForecastType = "forecast_v";
 	private final static String Private_Key = "425b8d_SmartWeatherAPI_0cf95c4";
 	private final static String DateFormat = "yyyyMMddHHmm";
+	private final static String DateFormat_1 = "MM月dd日";
 	private String releaseTime = "";
-	private ForecastBeanC forecastBeanC = new ForecastBeanC();
-	private List<ForecastBeanF> listForecastF = new ArrayList<ForecastBeanF>();
-	private List<IndexBean> listIndex = new ArrayList<IndexBean>();
+	private ForecastBeanC forecastBeanC = null;
+	private List<ForecastBeanF> listForecastF = null;
+	private List<IndexBean> listIndex = null;
 	
-	public static void main(String[] args) {  
-		
-		WeatherService weatherService = new WeatherService();
-		weatherService.getWeatherInfo("101070202");
-		
-//		return null;
-	}
-	
-	private String getWeatherInfo(String areaId) {
+	public static List<Article> getWeatherInfo(String area) {
 		DateFormat format = new SimpleDateFormat(DateFormat);
 		String date = format.format(new Date());
-
+		
 		//data初始化
 		WeatherCode.init();
+		String areaId = WeatherCode.getCityMapValue(area);
+		if (areaId == null || areaId.equals("")) return null;
 		//常规预报数据
-		makeJsonDataForecast(areaId,date);
+		weatherService.makeJsonDataForecast(areaId,date);
 		//指数数据
-		makeJsonDataIndex(areaId,date);
+		weatherService.makeJsonDataIndex(areaId,date);
 		
-//		return makeDataInfo();
-		return null;
+		return weatherService.makeDataInfo(areaId);
 	}
 	
-	public static List<Article> makeDataInfo() {
-		List<Article> articleList = new ArrayList<Article>();
+	private String makeRealeseDate() {
+		String temp = releaseTime.substring(8, 10);
+		String message = "";
 		
-        Article article1 = new Article();  
-        article1.setTitle("微信公众帐号开发教程\n引言");  
+		if (temp.equals("08")) {
+			message = "上午09:00";
+		} else if (temp.equals("11")) {
+			message = "上午11:00";
+		} else if (temp.equals("18")) {
+			message = "下午18:00";
+		}
+		
+		return message;
+	}
+	
+	private String getWeatherScene(String day,String night) {
+		String weatherSceneInfo = "";
+		if (day.equals(night)) {
+			weatherSceneInfo = WeatherCode.getWeatherSceneMapValue(day);
+		} else {
+			weatherSceneInfo = WeatherCode.getWeatherSceneMapValue(day) + "转" + WeatherCode.getWeatherSceneMapValue(night);
+		}
+		
+		return weatherSceneInfo;
+	}
+	
+	private String getWindInfo(String windDirection_day,
+								String windDirection_night,
+								String WindPower_day,
+								String windPower_night) {
+		String windInfo = "";
+		
+		if (windDirection_day.equals(windDirection_night)) {
+			windInfo = WeatherCode.getWindDirectorMapValue(windDirection_day) + 
+					WeatherCode.getwindPowerMapValue(WindPower_day) + "转" + 
+					WeatherCode.getwindPowerMapValue(windPower_night);
+		} else {
+			windInfo = WeatherCode.getWindDirectorMapValue(windDirection_day) + 
+					WeatherCode.getwindPowerMapValue(WindPower_day) + "转" + 
+					WeatherCode.getWindDirectorMapValue(windDirection_night) +
+					WeatherCode.getwindPowerMapValue(windPower_night);
+		}
+		return windInfo;
+	}
+	
+	private List<Article> makeDataInfo(String areaId) {
+		List<Article> articleList = new ArrayList<Article>();
+		DateFormat format = new SimpleDateFormat(DateFormat);
+		DateFormat format1 = new SimpleDateFormat(DateFormat_1);
+		Calendar caleander = Calendar.getInstance();
+		caleander.setTime(new Date());
+		
+		String date = "今天";
+		try {
+			date = format1.format(format.parse(releaseTime));
+		} catch (ParseException e) {
+			e.printStackTrace();
+		}
+		
+		Article article1 = new Article();  
+        article1.setTitle(forecastBeanC.getCity_cn() + "   中国气象局发布时间:" + makeRealeseDate());  
         article1.setDescription("");  
-        article1.setPicUrl("");  
-        article1.setUrl("http://blog.csdn.net/lyq8479/article/details/8937622");  
+        article1.setPicUrl("http://a2.qpic.cn/psb?/V14Tfb4s4TxSWi/NRCcRVMeqUjc*b7DfTvC0UkPGMQ4C66hyqNp1uAL22c!/b/dBn18KamLQAA&bo=gQJBAQAAAAADAOY!&rf=viewer_4");  
+        article1.setUrl("http://m.weather.com.cn/mweather/" + areaId +".shtml?data=7d");
+        
+        articleList.add(article1);
+        
+		for (int i = 0; i < listForecastF.size(); i++) {
+			ForecastBeanF forecastBeanF = listForecastF.get(i);
+			Article article = new Article();  
+			String weatherScene = getWeatherScene(forecastBeanF.getForecast_day(),forecastBeanF.getForecast_night());
+			String temprature = " " + forecastBeanF.getTemperature_day()+"℃" + forecastBeanF.getTemperature_night()+"℃,";
+			String windInfo = getWindInfo(forecastBeanF.getWindDirection_day(),
+										   forecastBeanF.getWindDirection_night(),
+										   forecastBeanF.getWindPower_day(),
+										   forecastBeanF.getWindPower_night());
+			
+			StringBuffer buffer = new StringBuffer();
+			
 
-        Article article2 = new Article();  
-        article2.setTitle("第2篇\n微信公众帐号的类型");  
-        article2.setDescription("");  
-        article2.setPicUrl("");  
-        article2.setUrl("http://blog.csdn.net/lyq8479/article/details/8941577");  
+			if (i == 0) {
+				buffer.append("【" + date +"】 ")
+				  	  .append(weatherScene)
+				      .append(temprature)
+				      .append(windInfo);
+				article.setTitle(buffer.toString());  				
+			} else if (i == 1) {
+				buffer.append("【明天】 ")
+			  	  .append(weatherScene)
+			      .append(temprature)
+			      .append(windInfo);
+				article.setTitle(buffer.toString());  
+			} else if (i == 2) {
+				buffer.append("【后天】 ")
+			  	  .append(weatherScene)
+			      .append(temprature)
+			      .append(windInfo);
+				article.setTitle(buffer.toString());  
+			}
 
-        Article article3 = new Article();  
-        article3.setTitle("第3篇\n开发模式启用及接口配置");  
-        article3.setDescription("");  
-        article3.setPicUrl("");  
-        article3.setUrl("http://blog.csdn.net/lyq8479/article/details/8944988");  
-
-        articleList.add(article1);  
-        articleList.add(article2);  
-        articleList.add(article3); 
+			article.setDescription("");  
+			article.setPicUrl(caleander.get(Calendar.HOUR_OF_DAY) > 14?getUrl(forecastBeanF.getForecast_night()):getUrl(forecastBeanF.getForecast_day()));  
+			article.setUrl("http://m.weather.com.cn/mweather/" + areaId +".shtml?data=7d");
+			
+			articleList.add(article);
+		}
         
 		return articleList;
+	}
+	
+	private String getUrl(String code) {
+		String url = "";
+		if (code != null) {
+			if (code.equals("00")) {
+				url = "http://a2.qpic.cn/psb?/V14Tfb4s4TxSWi/Y6*lhdEbATRDIX3wA5XEx*9BCOTNUdIB3lBmYY.yrgg!/b/dDbX6qZSLQAA&bo=UABQAAAAAAADACU!&rf=viewer_4";
+			} else {
+				
+				String[] arr1 = {"01","02","18","29","30","31","53"};
+				String[] arr2 = {"03","04","05","06","07","08","09","10","11","12","19","20","21","22","23","24","25"};
+				String[] arr3 = {"13","14","15","16","17","26","27","28"};
+				
+				List<String> list1 = Arrays.asList(arr1);
+				List<String> list2 = Arrays.asList(arr2);
+				List<String> list3 = Arrays.asList(arr3);
+				
+				if (list1.contains(code)) {
+					url = "http://a2.qpic.cn/psb?/V14Tfb4s4TxSWi/u*Az3RTkrOl4.44P4*GqxGqH69LGZ5O4Q9*rEC.mV0I!/b/dKdG6abpLAAA&bo=UABQAAAAAAADByI!&rf=viewer_4";
+				} else if (list2.contains(code)) {
+					url = "http://a2.qpic.cn/psb?/V14Tfb4s4TxSWi/t4oV8pNDUDN7OJC5an5Qsdh3kf3aZUFiPnRl4tKqbGc!/b/dJY55qYqLgAA&bo=UABQAAAAAAADACU!&rf=viewer_4";
+				} else if (list3.contains(code)) {
+					url = "http://a2.qpic.cn/psb?/V14Tfb4s4TxSWi/kGIo0QLPOo5iZqLEVXBX3e5QK01DcLT2MrZ6cjjhTfQ!/b/dP*R8KZ2KAAA&bo=UABQAAAAAAADACU!&rf=viewer_4";					
+				}
+			}
+		}
+		return url;
 	}
 	
 	@SuppressWarnings("unchecked")
 	private void makeJsonDataIndex(String areaId,String date) {
 		
+		listIndex = new ArrayList<IndexBean>();
 		String respData = returnResponseData(areaId, IndexType, date);
 
 		JSONObject json = JSONObject.fromObject(respData); 
@@ -122,6 +234,8 @@ public class WeatherService {
 	@SuppressWarnings("unchecked")
 	private void makeJsonDataForecast(String areaId,String date) {
 		
+		listForecastF = new ArrayList<ForecastBeanF>();
+		forecastBeanC = new ForecastBeanC();
 		String respData = returnResponseData(areaId, ForecastType, date);
 
 		JSONObject json = JSONObject.fromObject(respData); 
@@ -192,7 +306,6 @@ public class WeatherService {
 		//请求URL
 		String requestUrl = "http://open.weather.com.cn/data/?areaid="+areaId+"&type="+type+"&date="+date+"&appid="+AppId.substring(0, 6)+"&key="+encoder; 
 		String respData = httpRequest(requestUrl);
-		
 		return respData;
 	}
 	
@@ -253,4 +366,9 @@ public class WeatherService {
         }
         return urlEncoder;
     } 
+    
+	public static void main(String[] args) throws ParseException {
+		String reqContent = "大连天气";
+		getWeatherInfo(reqContent.replaceAll("\\s*", "").replace("天气", ""));
+	}
 }
