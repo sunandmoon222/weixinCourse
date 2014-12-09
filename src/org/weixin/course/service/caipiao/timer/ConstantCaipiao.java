@@ -4,7 +4,7 @@ public class ConstantCaipiao {
 
 	public final static String DATE_FORMAT = "yyyy-MM-dd HH:mm:ss";
 	public final static int THREAD_SLEEP_TIME = 2;
-	public final static boolean isPC = false;
+	private static boolean isPC = false;
 	
 	//大乐透
 	public final static String DALETOU_URL = "http://www.lottery.gov.cn/lottery/dlt/History.aspx?p=";
@@ -44,6 +44,10 @@ public class ConstantCaipiao {
 	public final static String THREE_D_LOCAL_PATH = System.getProperty("user.dir") + "\\src\\Resources\\data\\caipiao\\threeDData.txt";
 	public final static String THREE_D_URL = "http://www.cwl.gov.cn";
 	public final static String CAIPIAO_NAME_THREE_D = "3D";
+	
+	public static void setIsPC (boolean bool) {
+		isPC = bool;
+	}
 	
 	public static String getDaLeTouPath() {
 		

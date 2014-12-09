@@ -12,8 +12,8 @@ public class MenuContent {
 		buffer.append("您好，我是聪明的熊大，请回复数字选择服务：").append("\n\n");
 		buffer.append("1  天气预报").append("\n");
 		buffer.append("2  公交查询").append("\n");
-		buffer.append("3  彩票查询").append("\n");
-		buffer.append("4  体育彩票").append("\n");
+		buffer.append("3  福利彩票查询").append("\n");
+		buffer.append("4  体育彩票彩票").append("\n");
 		buffer.append("<a href=\"http://wzcx.runsky.com\">5 违章查询</a>").append("\n");
 		buffer.append("6 历史上的今天").append("\n");
 		buffer.append("7  人脸识别").append("\n");

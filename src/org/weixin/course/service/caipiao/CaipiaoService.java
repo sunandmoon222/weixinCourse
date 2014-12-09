@@ -258,6 +258,8 @@ public class CaipiaoService {
 	
 	public static String getFuLiCaipiaoInfo() {
 
+		ConstantCaipiao.setIsPC(false);
+		
 		String strThreeD = getThreeDInfo();
 		String strShuangSeQiu = getShuangSeQiuInfo();
 		String strSevenHappy = getSevenHappyInfo();
@@ -271,6 +273,8 @@ public class CaipiaoService {
 	}
 	
 	public static String getSportsCaipiaoInfo() {
+		
+		ConstantCaipiao.setIsPC(false);
 		
 		String strDaletou = getDaletouInfo();
 		String strPaiLieSan = getPaiLieSanInfo();

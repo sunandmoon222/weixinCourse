@@ -71,7 +71,7 @@ public class WeatherService {
 		String message = "";
 		
 		if (temp.equals("08")) {
-			message = "上午09:00";
+			message = "上午08:00";
 		} else if (temp.equals("11")) {
 			message = "上午11:00";
 		} else if (temp.equals("18")) {
@@ -83,8 +83,8 @@ public class WeatherService {
 	
 	private String getWeatherScene(String day,String night) {
 		String weatherSceneInfo = "";
-		if (day.equals(night)) {
-			weatherSceneInfo = WeatherCode.getWeatherSceneMapValue(day);
+		if (day.equals("") || day.equals(night)) {
+			weatherSceneInfo = WeatherCode.getWeatherSceneMapValue(night);
 		} else {
 			weatherSceneInfo = WeatherCode.getWeatherSceneMapValue(day) + "转" + WeatherCode.getWeatherSceneMapValue(night);
 		}
@@ -98,7 +98,10 @@ public class WeatherService {
 								String windPower_night) {
 		String windInfo = "";
 		
-		if (windDirection_day.equals(windDirection_night)) {
+		if (windDirection_day.equals("")) {
+			windInfo = WeatherCode.getWindDirectorMapValue(windPower_night) + 
+					   WeatherCode.getwindPowerMapValue(windPower_night);			
+		} else if (windDirection_day.equals(windDirection_night)) {
 			windInfo = WeatherCode.getWindDirectorMapValue(windDirection_day) + 
 					WeatherCode.getwindPowerMapValue(WindPower_day) + "转" + 
 					WeatherCode.getwindPowerMapValue(windPower_night);
@@ -137,7 +140,7 @@ public class WeatherService {
 			ForecastBeanF forecastBeanF = listForecastF.get(i);
 			Article article = new Article();  
 			String weatherScene = getWeatherScene(forecastBeanF.getForecast_day(),forecastBeanF.getForecast_night());
-			String temprature = " " + forecastBeanF.getTemperature_day()+"℃" + forecastBeanF.getTemperature_night()+"℃,";
+			String temprature = " " + (forecastBeanF.getTemperature_day().equals("")?"":forecastBeanF.getTemperature_day()+"℃ ~ ") + forecastBeanF.getTemperature_night()+"℃,";
 			String windInfo = getWindInfo(forecastBeanF.getWindDirection_day(),
 										   forecastBeanF.getWindDirection_night(),
 										   forecastBeanF.getWindPower_day(),
