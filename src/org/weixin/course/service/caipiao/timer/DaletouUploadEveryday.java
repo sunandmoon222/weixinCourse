@@ -18,7 +18,7 @@ import java.util.Date;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
-import org.weixin.course.service.caipiao.bean.DaletouBean;
+import org.weixin.course.service.caipiao.bean.CaipiaoBaseBean;
 
 import com.thoughtworks.xstream.XStream;
 import com.thoughtworks.xstream.io.xml.DomDriver;
@@ -32,8 +32,8 @@ import com.thoughtworks.xstream.io.xml.DomDriver;
  */
 public class DaletouUploadEveryday {
 
-	private DaletouBean bean = new DaletouBean();
-	
+	private CaipiaoBaseBean bean = new CaipiaoBaseBean();
+
 	/**
 	 * 发起http get请求获取网页源代码
 	 * 
@@ -85,7 +85,7 @@ public class DaletouUploadEveryday {
 	private void extract(String html) {
 
 		DateFormat format = new SimpleDateFormat(ConstantCaipiao.DATE_FORMAT);
-		
+
 		String strTemp = null;
 		Pattern p = Pattern.compile("(.*)(追加奖金</td>\\s+</tr>)(.*)</TABLE>.*");
 		Matcher m = p.matcher(html);
@@ -95,43 +95,72 @@ public class DaletouUploadEveryday {
 
 		String[] data = strTemp.split("</tr>");
 		String dataTemp = data[0].replace("    ", "")
-								 .replaceAll("</?[^>]+>", "&").replaceAll("&+", "&")
-								 .replaceAll("&\\s\\+\\s&", "&");
-		String[] dataTemp1 = dataTemp.substring(1, dataTemp.length() - 1).split("&");
-		bean.setId(dataTemp1[0]);
-		bean.setResultNum_red(dataTemp1[1]);
-		bean.setResultNum_blue(dataTemp1[2]);
-		bean.setWinningNum(dataTemp1[3]);
-		bean.setBonusAmount(dataTemp1[4]);
-		bean.setWinningNumAdd(dataTemp1[5]);
-		bean.setBonusAmountAdd(dataTemp1[6]);
-		bean.setWinningNum_2(dataTemp1[7]);
-		bean.setBonusAmount_2(dataTemp1[8]);
-		bean.setWinningNumAdd_2(dataTemp1[9]);
-		bean.setBonusAmountAdd_2(dataTemp1[10]);
-		bean.setOpenTime(dataTemp1[11]);
-		bean.setUpdateDate(format.format(new Date()));
+				.replaceAll("</?[^>]+>", "&").replaceAll("&+", "&")
+				.replaceAll("&\\s\\+\\s&", "&");
+		String[] dataTemp1 = dataTemp.substring(1, dataTemp.length() - 1)
+				.split("&");
+		String urlRemaindBounus = data[0].replaceAll(".*href=", "")
+				.replaceAll("target.*", "").replace("'", "")
+				.replaceAll("\\s", "");
+
+		String htmlRemaindBounus = httpRequest("http://www.lottery.gov.cn"
+				+ urlRemaindBounus);
+		Pattern p1 = Pattern.compile(".*</tbody>(.*)元奖金滚入下期.*");
+		Matcher m1 = p1.matcher(htmlRemaindBounus);
+
+		String strTemp1 = null;
+		while (m1.find()) {
+			strTemp1 = m1.group(1);
+		}
+		strTemp1 = strTemp1.replaceAll("<.*>", "").replaceAll("\\t", "")
+				.replaceAll("　", "");
+
+		this.bean.setId(dataTemp1[0]);
+		this.bean.setResultNum(dataTemp1[1]);
+		this.bean.setResultNum_blue(dataTemp1[2]);
+		this.bean.setOpenTime(dataTemp1[11]);
+		this.bean.setUpdateDate(format.format(new Date()));
+		this.bean.setRemaindBounus(strTemp1);
+
+		// String[] data = strTemp.split("</tr>");
+		// String dataTemp = data[0].replace("    ", "")
+		// .replaceAll("</?[^>]+>", "&").replaceAll("&+", "&")
+		// .replaceAll("&\\s\\+\\s&", "&");
+		// String[] dataTemp1 = dataTemp.substring(1, dataTemp.length() -
+		// 1).split("&");
+		// bean.setId(dataTemp1[0]);
+		// bean.setResultNum_red(dataTemp1[1]);
+		// bean.setResultNum_blue(dataTemp1[2]);
+		// bean.setWinningNum(dataTemp1[3]);
+		// bean.setBonusAmount(dataTemp1[4]);
+		// bean.setWinningNumAdd(dataTemp1[5]);
+		// bean.setBonusAmountAdd(dataTemp1[6]);
+		// bean.setWinningNum_2(dataTemp1[7]);
+		// bean.setBonusAmount_2(dataTemp1[8]);
+		// bean.setWinningNumAdd_2(dataTemp1[9]);
+		// bean.setBonusAmountAdd_2(dataTemp1[10]);
+		// bean.setOpenTime(dataTemp1[11]);
+		// bean.setUpdateDate(format.format(new Date()));
 	}
 
 	private void makeXmlData() {
-
 		XStream xs = new XStream();
 		XStream xsBase = new XStream(new DomDriver());
-		// Write to a file in the file system
 		try {
 			OutputStream fs1 = new FileOutputStream(ConstantCaipiao.getDaLeTouPath_New());
-			xs.toXML(bean, fs1);
+			xs.toXML(this.bean, fs1);
 
 			File file = new File(ConstantCaipiao.getDaLeTouPath());
 			FileInputStream input = new FileInputStream(file);
-			@SuppressWarnings("unchecked")
-			ArrayList<DaletouBean> list = (ArrayList<DaletouBean>)xsBase.fromXML(input);
-			list.add(0, bean);
+
+			ArrayList<CaipiaoBaseBean> list = (ArrayList<CaipiaoBaseBean>)xsBase.fromXML(input);
+			list.remove(9);
+			list.add(0, this.bean);
 
 			OutputStream fs = new FileOutputStream(file);
-			
+
 			xsBase.toXML(list, fs);
-			
+
 			fs1.close();
 			fs.close();
 			fs1 = null;
@@ -149,15 +178,15 @@ public class DaletouUploadEveryday {
 	 * @return
 	 */
 	public void makeCaipiaoInfo() {
-		
+
 		// 获取网页源代码
 		String html = httpRequest(ConstantCaipiao.DALETOU_NEW_URL);
 		// 从网页中抽取信息
 		extract(html);
-			
+
 		makeXmlData();
 	}
-	
+
 	/**
 	 * 通过main在本地测试
 	 * 
@@ -166,6 +195,6 @@ public class DaletouUploadEveryday {
 	public static void main(String[] args) {
 		DaletouUploadEveryday daletouUploadEveryday = new DaletouUploadEveryday();
 		daletouUploadEveryday.makeCaipiaoInfo();
-		System.out.print("success~~~");
+		System.out.print("Daletou upload success~~~");
 	}
 }

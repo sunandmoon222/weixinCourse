@@ -1,0 +1,92 @@
+<list>
+  <org.weixin.course.service.caipiao.bean.CaipiaoBaseBean>
+    <id>14146</id>
+    <resultNum>02 16 23 24 28@10 11</resultNum>
+    <openTime>2014-12-13</openTime>
+    <updateDate>2014-12-15 19:30:27</updateDate>
+    <remaindBounus>1,361,277,737.96</remaindBounus>
+    <winningNum></winningNum>
+    <bonusAmount></bonusAmount>
+  </org.weixin.course.service.caipiao.bean.CaipiaoBaseBean>
+  <org.weixin.course.service.caipiao.bean.CaipiaoBaseBean>
+    <id>14145</id>
+    <resultNum>15 19 22 24 26@10 11</resultNum>
+    <openTime>2014-12-10</openTime>
+    <updateDate>2014-12-14 22:10:55</updateDate>
+    <remaindBounus></remaindBounus>
+    <winningNum></winningNum>
+    <bonusAmount></bonusAmount>
+  </org.weixin.course.service.caipiao.bean.CaipiaoBaseBean>
+  <org.weixin.course.service.caipiao.bean.CaipiaoBaseBean>
+    <id>14144</id>
+    <resultNum>01 21 24 25 35@04 11</resultNum>
+    <openTime>2014-12-08</openTime>
+    <updateDate>2014-12-14 22:10:55</updateDate>
+    <remaindBounus></remaindBounus>
+    <winningNum></winningNum>
+    <bonusAmount></bonusAmount>
+  </org.weixin.course.service.caipiao.bean.CaipiaoBaseBean>
+  <org.weixin.course.service.caipiao.bean.CaipiaoBaseBean>
+    <id>14143</id>
+    <resultNum>01 11 14 18 25@06 10</resultNum>
+    <openTime>2014-12-06</openTime>
+    <updateDate>2014-12-14 22:10:55</updateDate>
+    <remaindBounus></remaindBounus>
+    <winningNum></winningNum>
+    <bonusAmount></bonusAmount>
+  </org.weixin.course.service.caipiao.bean.CaipiaoBaseBean>
+  <org.weixin.course.service.caipiao.bean.CaipiaoBaseBean>
+    <id>14142</id>
+    <resultNum>18 21 25 28 30@04 06</resultNum>
+    <openTime>2014-12-03</openTime>
+    <updateDate>2014-12-14 22:10:55</updateDate>
+    <remaindBounus></remaindBounus>
+    <winningNum></winningNum>
+    <bonusAmount></bonusAmount>
+  </org.weixin.course.service.caipiao.bean.CaipiaoBaseBean>
+  <org.weixin.course.service.caipiao.bean.CaipiaoBaseBean>
+    <id>14141</id>
+    <resultNum>04 17 20 26 29@05 08</resultNum>
+    <openTime>2014-12-01</openTime>
+    <updateDate>2014-12-14 22:10:55</updateDate>
+    <remaindBounus></remaindBounus>
+    <winningNum></winningNum>
+    <bonusAmount></bonusAmount>
+  </org.weixin.course.service.caipiao.bean.CaipiaoBaseBean>
+  <org.weixin.course.service.caipiao.bean.CaipiaoBaseBean>
+    <id>14140</id>
+    <resultNum>01 19 20 25 34@07 12</resultNum>
+    <openTime>2014-11-29</openTime>
+    <updateDate>2014-12-14 22:10:55</updateDate>
+    <remaindBounus></remaindBounus>
+    <winningNum></winningNum>
+    <bonusAmount></bonusAmount>
+  </org.weixin.course.service.caipiao.bean.CaipiaoBaseBean>
+  <org.weixin.course.service.caipiao.bean.CaipiaoBaseBean>
+    <id>14139</id>
+    <resultNum>03 05 07 15 34@01 10</resultNum>
+    <openTime>2014-11-26</openTime>
+    <updateDate>2014-12-14 22:10:55</updateDate>
+    <remaindBounus></remaindBounus>
+    <winningNum></winningNum>
+    <bonusAmount></bonusAmount>
+  </org.weixin.course.service.caipiao.bean.CaipiaoBaseBean>
+  <org.weixin.course.service.caipiao.bean.CaipiaoBaseBean>
+    <id>14138</id>
+    <resultNum>01 07 29 32 34@09 12</resultNum>
+    <openTime>2014-11-24</openTime>
+    <updateDate>2014-12-14 22:10:55</updateDate>
+    <remaindBounus></remaindBounus>
+    <winningNum></winningNum>
+    <bonusAmount></bonusAmount>
+  </org.weixin.course.service.caipiao.bean.CaipiaoBaseBean>
+  <org.weixin.course.service.caipiao.bean.CaipiaoBaseBean>
+    <id>14136</id>
+    <resultNum>02 11 16 22 34@02 05</resultNum>
+    <openTime>2014-11-22</openTime>
+    <updateDate>2014-12-14 22:10:55</updateDate>
+    <remaindBounus></remaindBounus>
+    <winningNum></winningNum>
+    <bonusAmount></bonusAmount>
+  </org.weixin.course.service.caipiao.bean.CaipiaoBaseBean>
+</list>

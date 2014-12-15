@@ -2,19 +2,53 @@ package org.weixin.course.service.caipiao.bean;
 
 public class CaipiaoBaseBean {
 
-	//期数
 	private String id = "";
-	//中奖数目
-	private String winningNum = "";
-	//中奖金额
-	private String bonusAmount = "";
-	//开奖日期
+	private String resultNum = "";
 	private String openTime = "";
-	//更新日期
 	private String updateDate = "";
+	private String remaindBounus = "";
+	private String resultNum_blue = "";
+	private String resultNum_special = "";
 	
+	private String winningNum = "";
+	private String bonusAmount = "";
+
+	
+	
+	public String getResultNum_blue() {
+		return resultNum_blue;
+	}
+
+	public void setResultNum_blue(String resultNum_blue) {
+		this.resultNum_blue = resultNum_blue;
+	}
+
+	public String getResultNum_special() {
+		return resultNum_special;
+	}
+
+	public void setResultNum_special(String resultNum_special) {
+		this.resultNum_special = resultNum_special;
+	}
+
+	public String getResultNum() {
+		return this.resultNum;
+	}
+
+	public void setResultNum(String resultNum) {
+		this.resultNum = resultNum;
+	}
+
+	public String getRemaindBounus() {
+		return this.remaindBounus;
+	}
+
+	public void setRemaindBounus(String remaindBounus) {
+		this.remaindBounus = remaindBounus;
+	}
+
 	public String getUpdateDate() {
-		return updateDate;
+		return this.updateDate;
 	}
 
 	public void setUpdateDate(String updateDate) {
@@ -22,7 +56,7 @@ public class CaipiaoBaseBean {
 	}
 
 	public String getId() {
-		return id;
+		return this.id;
 	}
 
 	public void setId(String id) {
@@ -30,7 +64,7 @@ public class CaipiaoBaseBean {
 	}
 
 	public String getWinningNum() {
-		return winningNum;
+		return this.winningNum;
 	}
 
 	public void setWinningNum(String winningNum) {
@@ -38,7 +72,7 @@ public class CaipiaoBaseBean {
 	}
 
 	public String getBonusAmount() {
-		return bonusAmount;
+		return this.bonusAmount;
 	}
 
 	public void setBonusAmount(String bonusAmount) {
@@ -46,7 +80,7 @@ public class CaipiaoBaseBean {
 	}
 
 	public String getOpenTime() {
-		return openTime;
+		return this.openTime;
 	}
 
 	public void setOpenTime(String openTime) {

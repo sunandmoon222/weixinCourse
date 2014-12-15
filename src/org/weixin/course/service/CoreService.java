@@ -111,8 +111,21 @@ public class CoreService {
 				} else if (reqContent.equals("3")) {
 					respContent = CaipiaoService.getFuLiCaipiaoInfo();
 				//体育彩票查询 
-				} else if (reqContent.equals("4")) {
-					respContent = CaipiaoService.getSportsCaipiaoInfo();
+				} else  if (reqContent.equals("4")) {
+		            List<Article> articleList = CaipiaoService.getSportsCaipiaoInfo();
+
+		            NewsMessage newsMessage = new NewsMessage();
+
+		            newsMessage.setToUserName(fromUserName);
+		            newsMessage.setFromUserName(toUserName);
+		            newsMessage.setCreateTime(new Date().getTime());
+		            newsMessage.setMsgType("news");
+		            newsMessage.setFuncFlag(0);
+
+		            newsMessage.setArticleCount(articleList.size());
+		            newsMessage.setArticles(articleList);
+
+		            return SignUtil.encryptMsg(MessageUtil.newsMessageToXml(newsMessage), nonce, timestamp);
 				//历史上的今天
 				} else if (reqContent.equals("6")) {
 					respContent = TodayInHistoryService.getTodayInHistoryInfo();
