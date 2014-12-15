@@ -7,28 +7,26 @@ public class CaipiaoBaseBean {
 	private String openTime = "";
 	private String updateDate = "";
 	private String remaindBounus = "";
-	private String resultNum_blue = "";
-	private String resultNum_special = "";
+	private String resultNumBlue = "";
+	private String resultNumSpecial = "";
 	
 	private String winningNum = "";
 	private String bonusAmount = "";
 
-	
-	
-	public String getResultNum_blue() {
-		return resultNum_blue;
+	public String getResultNumBlue() {
+		return resultNumBlue;
 	}
 
-	public void setResultNum_blue(String resultNum_blue) {
-		this.resultNum_blue = resultNum_blue;
+	public void setResultNumBlue(String resultNumBlue) {
+		this.resultNumBlue = resultNumBlue;
 	}
 
-	public String getResultNum_special() {
-		return resultNum_special;
+	public String getResultNumSpecial() {
+		return resultNumSpecial;
 	}
 
-	public void setResultNum_special(String resultNum_special) {
-		this.resultNum_special = resultNum_special;
+	public void setResultNumSpecial(String resultNumSpecial) {
+		this.resultNumSpecial = resultNumSpecial;
 	}
 
 	public String getResultNum() {

@@ -43,10 +43,9 @@ public class CaipiaoService {
 
 		xs.fromXML(input, bean);
 
-		String[] str = bean.getResultNum().split("@");
 		buffer.append("超级大乐透").append(" 【第").append(bean.getId()).append("期】")
-				.append("\n").append("前区:").append(str[0]).append("\n")
-				.append("后区:").append(str[1]).append("\n");
+				.append("\n").append("前区:").append(bean.getResultNum()).append("\n")
+				.append("后区:").append(bean.getResultNumBlue()).append("\n");
 
 		// buffer.append(ConstantCaipiao.CAIPIAO_NAME_DALETOU).append("\n")
 		// .append("期号:"+bean.getId()).append("\n")

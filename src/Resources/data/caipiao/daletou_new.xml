@@ -1,9 +1,11 @@
 <org.weixin.course.service.caipiao.bean.CaipiaoBaseBean>
   <id>14146</id>
-  <resultNum>02 16 23 24 28@10 11</resultNum>
+  <resultNum>02 16 23 24 28</resultNum>
   <openTime>2014-12-13</openTime>
-  <updateDate>2014-12-15 19:30:27</updateDate>
+  <updateDate>2014-12-15 20:37:26</updateDate>
   <remaindBounus>1,361,277,737.96</remaindBounus>
+  <resultNumBlue>10 11</resultNumBlue>
+  <resultNumSpecial></resultNumSpecial>
   <winningNum></winningNum>
   <bonusAmount></bonusAmount>
 </org.weixin.course.service.caipiao.bean.CaipiaoBaseBean>

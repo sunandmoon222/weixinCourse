@@ -117,7 +117,7 @@ public class DaletouUploadEveryday {
 
 		this.bean.setId(dataTemp1[0]);
 		this.bean.setResultNum(dataTemp1[1]);
-		this.bean.setResultNum_blue(dataTemp1[2]);
+		this.bean.setResultNumBlue(dataTemp1[2]);
 		this.bean.setOpenTime(dataTemp1[11]);
 		this.bean.setUpdateDate(format.format(new Date()));
 		this.bean.setRemaindBounus(strTemp1);
