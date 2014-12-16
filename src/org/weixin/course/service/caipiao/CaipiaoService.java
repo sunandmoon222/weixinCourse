@@ -296,7 +296,7 @@ public class CaipiaoService {
 		article1.setTitle("中国福利彩票开奖结果查询");
 		article1.setDescription("");
 		article1.setPicUrl("http://a3.qpic.cn/psb?/V14Tfb4s4TxSWi/jfkvg92YSby1ZAFkiOxlHuI2TFxpDFATttITTVAECEs!/b/dJqHjKe5HQAA&bo=gAKvAAAAAAAFBwk!&rf=viewer_4");
-		article1.setUrl("http://www.xutian-technology.com:8080/weixinCourse_sp/caipiao/seq.do");
+		article1.setUrl("http://www.xutian-technology.com:8080/weixinCourse_sp/caipiao/ssq.do");
 
 		list.add(article1);
 
@@ -309,7 +309,7 @@ public class CaipiaoService {
 				article.setTitle(info);
 				article.setDescription("");
 				article.setPicUrl("http://a3.qpic.cn/psb?/V14Tfb4s4TxSWi/IeL66k7FU5sgHqNzjnWZXfPzpccuO3xhJNS2bDSSGio!/b/dHCQjKdxHgAA&bo=UABQAAAAAAAFByQ!&rf=viewer_4");
-				article.setUrl("http://www.xutian-technology.com:8080/weixinCourse_sp/caipiao/seq.do");
+				article.setUrl("http://www.xutian-technology.com:8080/weixinCourse_sp/caipiao/ssq.do");
 				break;
 			case 1:
 				info = getSevenHappyInfo();
@@ -375,7 +375,7 @@ public class CaipiaoService {
 				article.setTitle(info);
 				article.setDescription("");
 				article.setPicUrl("http://a2.qpic.cn/psb?/V14Tfb4s4TxSWi/nu5Jiq0646ywmLovzwxy6lUoB.G0RvQbDpv2fBG1TKg!/b/dFXR8KZpKwAA&bo=UABOAAAAAAAFBzo!&rf=viewer_4");
-				article.setUrl("http://www.xutian-technology.com:8080/weixinCourse_sp/caipiao/qx.do");
+				article.setUrl("http://www.xutian-technology.com:8080/weixinCourse_sp/caipiao/qxc.do");
 				break;
 			}
 
