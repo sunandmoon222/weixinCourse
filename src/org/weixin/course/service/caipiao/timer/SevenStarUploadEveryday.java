@@ -35,6 +35,18 @@ public class SevenStarUploadEveryday {
 
 	private CaipiaoBaseBean bean = new CaipiaoBaseBean();
 
+	private String addSpace(String str) {
+		StringBuffer buff = new StringBuffer();
+		for (int i = 0; i < str.length(); i++) {
+			if (i == str.length()-1)
+				buff.append(str.charAt(i));
+			else 
+				buff.append(str.charAt(i)).append(" ");
+		}
+		
+		return buff.toString();
+	}
+	
 	/**
 	 * 发起http get请求获取网页源代码
 	 * 
@@ -118,7 +130,7 @@ public class SevenStarUploadEveryday {
 				.replaceAll("　", "");
 
 		this.bean.setId(dataTemp1[0]);
-		this.bean.setResultNum(dataTemp1[1]);
+		this.bean.setResultNum(addSpace(dataTemp1[1]));
 		this.bean.setOpenTime(dataTemp1[8]);
 		this.bean.setUpdateDate(format.format(new Date()));
 		this.bean.setRemaindBounus(strTemp1);
