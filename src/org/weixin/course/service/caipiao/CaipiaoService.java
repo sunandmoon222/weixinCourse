@@ -295,7 +295,7 @@ public class CaipiaoService {
 		Article article1 = new Article();
 		article1.setTitle("中国福利彩票开奖结果查询");
 		article1.setDescription("");
-		article1.setPicUrl("http://a3.qpic.cn/psb?/V14Tfb4s4TxSWi/jfkvg92YSby1ZAFkiOxlHuI2TFxpDFATttITTVAECEs!/b/dJqHjKe5HQAA&bo=gAKvAAAAAAAFBwk!&rf=viewer_4");
+		article1.setPicUrl("http://a2.qpic.cn/psb?/V14Tfb4s4TxSWi/JcHDeSc1yD0yXtx7XuHZAbWWkBN2hZ86NFbxE*5LYk0!/m/dN5jgKfEHgAAnull&bo=gAKNAQAAAAAFByo!&rf=photolist&t=5");
 		article1.setUrl("http://www.xutian-technology.com:8080/weixinCourse_sp/caipiao/ssq.do");
 
 		list.add(article1);
