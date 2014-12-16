@@ -32,17 +32,17 @@ public class ConstantCaipiao {
 	//双色球
 	public static final String CAIPIAO_NAME_SHUANGSEQIU = "双色球";
 	public static final String SHUANGSEQIU_LOCAL_PATH = System.getProperty("user.dir")+ "\\src\\Resources\\data\\caipiao\\shuangseqiuData.txt";
-	public static final String SHUANGSEQIU_URL = "http://www.cwl.gov.cn";
+	public static final String SHUANGSEQIU_URL = "http://baidu.lecai.com/lottery/draw/";
 	
 	//七乐彩
 	public static final String CAIPIAO_NAME_SEVEN_HAPPY = "七乐彩";
 	public static final String SEVEN_HAPPY_LOCAL_PATH = System.getProperty("user.dir")+ "\\src\\Resources\\data\\caipiao\\sevenhappyData.txt";
-	public static final String SEVEN_HAPPY_URL = "http://www.cwl.gov.cn";
+	public static final String SEVEN_HAPPY_URL = "http://baidu.lecai.com/lottery/draw/";
 	
 	//3D
 	public static final String CAIPIAO_NAME_THREE_D = "3D";
 	public static final String THREE_D_LOCAL_PATH = System.getProperty("user.dir")+ "\\src\\Resources\\data\\caipiao\\threeDData.txt";
-	public static final String THREE_D_URL = "http://www.cwl.gov.cn";
+	public static final String THREE_D_URL = "http://baidu.lecai.com/lottery/draw/";
 
 	public static void setIsPC(boolean bool) {
 		isPC = bool;

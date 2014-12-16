@@ -43,9 +43,11 @@ public class CaipiaoService {
 
 		xs.fromXML(input, bean);
 
-		buffer.append("超级大乐透").append(" 【第").append(bean.getId()).append("期】")
-				.append("\n").append("前区:").append(bean.getResultNum()).append("\n")
-				.append("后区:").append(bean.getResultNumBlue()).append("\n");
+		buffer.append(ConstantCaipiao.CAIPIAO_NAME_DALETOU)
+			  .append(" 【第")
+			  .append(bean.getId()).append("期】")
+			  .append("\n").append("前区:").append(bean.getResultNum()).append("\n")
+			  .append("后区:").append(bean.getResultNumBlue());
 
 		// buffer.append(ConstantCaipiao.CAIPIAO_NAME_DALETOU).append("\n")
 		// .append("期号:"+bean.getId()).append("\n")
@@ -83,8 +85,11 @@ public class CaipiaoService {
 
 		xs.fromXML(input, bean);
 
-		buffer.append("排列三").append(" 【第").append(bean.getId()).append("期】")
-				.append("\n").append("开奖结果:").append(bean.getResultNum());
+		buffer.append(ConstantCaipiao.CAIPIAO_NAME_PAILIESAN)
+			  .append(" 【第")
+			  .append(bean.getId())
+			  .append("期】")
+			  .append("\n").append("开奖结果: ").append(bean.getResultNum());
 
 		try {
 			input.close();
@@ -111,8 +116,11 @@ public class CaipiaoService {
 
 		xs.fromXML(input, bean);
 
-		buffer.append("排列五").append(" 【第").append(bean.getId()).append("期】")
-				.append("\n").append("开奖结果:").append(bean.getResultNum());
+		buffer.append(ConstantCaipiao.CAIPIAO_NAME_PAILIEFIVE)
+			  .append(" 【第")
+			  .append(bean.getId())
+			  .append("期】")
+			  .append("\n").append("开奖结果: ").append(bean.getResultNum());
 
 		try {
 			input.close();
@@ -139,8 +147,11 @@ public class CaipiaoService {
 
 		xs.fromXML(input, bean);
 
-		buffer.append("七星彩").append(" 【第").append(bean.getId()).append("期】")
-				.append("\n").append("开奖结果:").append(bean.getResultNum());
+		buffer.append(ConstantCaipiao.CAIPIAO_NAME_SEVENSTAR)
+			  .append(" 【第")
+			  .append(bean.getId())
+			  .append("期】")
+			  .append("\n").append("开奖结果: ").append(bean.getResultNum());
 
 		try {
 			input.close();
@@ -153,7 +164,7 @@ public class CaipiaoService {
 
 	private static String getShuangSeQiuInfo() {
 		StringBuffer buffer = new StringBuffer();
-		ShuangSeQiuBean bean = new ShuangSeQiuBean();
+		CaipiaoBaseBean bean = new CaipiaoBaseBean();
 		XStream xs = new XStream(new DomDriver());
 
 		File file = new File(ConstantCaipiao.getShuangSeQiuPath_New());
@@ -167,17 +178,28 @@ public class CaipiaoService {
 
 		xs.fromXML(input, bean);
 
-		buffer.append(ConstantCaipiao.CAIPIAO_NAME_SHUANGSEQIU).append("\n")
-				.append("期号:" + bean.getId()).append("\n").append("开奖日期：")
-				.append(bean.getOpenTime()).append("\n").append("中奖号码：")
-				.append("\n").append(" 红球：" + bean.getResultNum_red())
-				.append("\n").append(" 蓝球：" + bean.getResultNum_blue())
-				.append("\n").append("一等奖中奖人数：").append(bean.getWinningNum())
-				.append("\n").append("一等奖中奖金额：").append(bean.getBonusAmount())
-				.append("\n\n").append("二等奖中奖人数：")
-				.append(bean.getWinningNum_2()).append("\n").append("二等奖中奖金额：")
-				.append(bean.getBonusAmount_2()).append("\n\n")
-				.append(bean.getMesseage()).append("\n\n");
+		buffer.append(ConstantCaipiao.CAIPIAO_NAME_SHUANGSEQIU)
+			  .append(" 【第")
+			  .append(bean.getId())
+			  .append("期】")
+			  .append("\n").append("红球:").append(bean.getResultNum()).append("\n")
+			  .append("蓝球:").append(bean.getResultNumBlue());
+		
+		if (!"".equals(bean.getResultNumSpecial())) {
+			buffer.append("  幸运蓝球:").append(bean.getResultNumSpecial());
+		}
+		
+//		buffer.append(ConstantCaipiao.CAIPIAO_NAME_SHUANGSEQIU).append("\n")
+//				.append("期号:" + bean.getId()).append("\n").append("开奖日期：")
+//				.append(bean.getOpenTime()).append("\n").append("中奖号码：")
+//				.append("\n").append(" 红球：" + bean.getResultNum_red())
+//				.append("\n").append(" 蓝球：" + bean.getResultNum_blue())
+//				.append("\n").append("一等奖中奖人数：").append(bean.getWinningNum())
+//				.append("\n").append("一等奖中奖金额：").append(bean.getBonusAmount())
+//				.append("\n\n").append("二等奖中奖人数：")
+//				.append(bean.getWinningNum_2()).append("\n").append("二等奖中奖金额：")
+//				.append(bean.getBonusAmount_2()).append("\n\n")
+//				.append(bean.getMesseage()).append("\n\n");
 
 		try {
 			input.close();
@@ -190,7 +212,7 @@ public class CaipiaoService {
 
 	private static String getSevenHappyInfo() {
 		StringBuffer buffer = new StringBuffer();
-		SevenHappyBean bean = new SevenHappyBean();
+		CaipiaoBaseBean bean = new CaipiaoBaseBean();
 		XStream xs = new XStream(new DomDriver());
 
 		File file = new File(ConstantCaipiao.getSevenHappyPath_New());
@@ -204,17 +226,25 @@ public class CaipiaoService {
 
 		xs.fromXML(input, bean);
 
-		buffer.append(ConstantCaipiao.CAIPIAO_NAME_SEVEN_HAPPY).append("\n")
-				.append("期号:" + bean.getId()).append("\n").append("开奖日期：")
-				.append(bean.getOpenTime()).append("\n")
-				.append("基本号码：" + bean.getResultNum()).append("\n")
-				.append("特别号码：" + bean.getResultNum_add()).append("\n")
-				.append("一等奖中奖人数：").append(bean.getWinningNum()).append("\n")
-				.append("一等奖中奖金额：").append(bean.getBonusAmount())
-				.append("\n\n").append("二等奖中奖人数：")
-				.append(bean.getWinningNum_2()).append("\n").append("二等奖中奖金额：")
-				.append(bean.getBonusAmount_2()).append("\n\n")
-				.append(bean.getMesseage());
+		buffer.append(ConstantCaipiao.CAIPIAO_NAME_SEVEN_HAPPY)
+			  .append(" 【第")
+			  .append(bean.getId())
+			  .append("期】")
+			  .append("\n")
+			  .append("开奖结果: ")
+			  .append(bean.getResultNum())
+			  .append("  特别号码:").append(bean.getResultNumBlue());
+//		buffer.append(ConstantCaipiao.CAIPIAO_NAME_SEVEN_HAPPY).append("\n")
+//				.append("期号:" + bean.getId()).append("\n").append("开奖日期：")
+//				.append(bean.getOpenTime()).append("\n")
+//				.append("基本号码：" + bean.getResultNum()).append("\n")
+//				.append("特别号码：" + bean.getResultNum_add()).append("\n")
+//				.append("一等奖中奖人数：").append(bean.getWinningNum()).append("\n")
+//				.append("一等奖中奖金额：").append(bean.getBonusAmount())
+//				.append("\n\n").append("二等奖中奖人数：")
+//				.append(bean.getWinningNum_2()).append("\n").append("二等奖中奖金额：")
+//				.append(bean.getBonusAmount_2()).append("\n\n")
+//				.append(bean.getMesseage());
 
 		try {
 			input.close();
@@ -227,7 +257,7 @@ public class CaipiaoService {
 
 	private static String getThreeDInfo() {
 		StringBuffer buffer = new StringBuffer();
-		ThreeDBean bean = new ThreeDBean();
+		CaipiaoBaseBean bean = new CaipiaoBaseBean();
 		XStream xs = new XStream(new DomDriver());
 
 		File file = new File(ConstantCaipiao.getThreeDPath_New());
@@ -241,10 +271,13 @@ public class CaipiaoService {
 
 		xs.fromXML(input, bean);
 
-		buffer.append(ConstantCaipiao.CAIPIAO_NAME_THREE_D).append("\n")
-				.append("期号:" + bean.getId()).append("\n").append("开奖日期：")
-				.append(bean.getOpenTime()).append("\n").append("中奖号码：")
-				.append(bean.getResultNum()).append("\n\n");
+		buffer.append(ConstantCaipiao.CAIPIAO_NAME_THREE_D)
+			  .append(" 【第")
+			  .append(bean.getId())
+			  .append("期】")
+			  .append("\n")
+			  .append("开奖结果: ")
+			  .append(bean.getResultNum());
 
 		try {
 			input.close();
@@ -255,18 +288,49 @@ public class CaipiaoService {
 		return buffer.toString();
 	}
 
-	public static String getFuLiCaipiaoInfo() {
+	public static List<Article> getFuLiCaipiaoInfo() {
+		List<Article> list = new ArrayList<Article>(4);
+		String info = null;
 
-		ConstantCaipiao.setIsPC(false);
+		Article article1 = new Article();
+		article1.setTitle("中国福利彩票开奖结果查询");
+		article1.setDescription("");
+		article1.setPicUrl("http://a3.qpic.cn/psb?/V14Tfb4s4TxSWi/jfkvg92YSby1ZAFkiOxlHuI2TFxpDFATttITTVAECEs!/b/dJqHjKe5HQAA&bo=gAKvAAAAAAAFBwk!&rf=viewer_4");
+		article1.setUrl("http://www.xutian-technology.com:8080/weixinCourse_sp/caipiao/seq.do");
 
-		String strThreeD = getThreeDInfo();
-		String strShuangSeQiu = getShuangSeQiuInfo();
-		String strSevenHappy = getSevenHappyInfo();
+		list.add(article1);
 
-		StringBuffer buffer = new StringBuffer();
-		buffer.append(strThreeD).append(strShuangSeQiu).append(strSevenHappy);
+		for (int i = 0; i < 3; i++) {
+			Article article = new Article();
 
-		return buffer.toString();
+			switch (i) {
+			case 0:
+				info = getShuangSeQiuInfo();
+				article.setTitle(info);
+				article.setDescription("");
+				article.setPicUrl("http://a3.qpic.cn/psb?/V14Tfb4s4TxSWi/IeL66k7FU5sgHqNzjnWZXfPzpccuO3xhJNS2bDSSGio!/b/dHCQjKdxHgAA&bo=UABQAAAAAAAFByQ!&rf=viewer_4");
+				article.setUrl("http://www.xutian-technology.com:8080/weixinCourse_sp/caipiao/seq.do");
+				break;
+			case 1:
+				info = getSevenHappyInfo();
+				article.setTitle(info);
+				article.setDescription("");
+				article.setPicUrl("http://a2.qpic.cn/psb?/V14Tfb4s4TxSWi/2VGbup1.PWR.5dc4cCF5ndcSP*Sy5h*XoJx9muU1U4Y!/b/dBha76aRMQAA&bo=UABRAAAAAAAFByU!&rf=viewer_4");
+				article.setUrl("http://www.xutian-technology.com:8080/weixinCourse_sp/caipiao/qlc.do");
+				break;
+			case 2:
+				info = getThreeDInfo();
+				article.setTitle(info);
+				article.setDescription("");
+				article.setPicUrl("http://a3.qpic.cn/psb?/V14Tfb4s4TxSWi/cY5skTUtrtTHPvpqi8mvNMgK4F6.zz4yxLq2KBCFcU4!/b/dKX5h6cAHQAA&bo=UABQAAAAAAAFByQ!&rf=viewer_4");
+				article.setUrl("http://www.xutian-technology.com:8080/weixinCourse_sp/caipiao/3d.do");
+				break;
+			}
+
+			list.add(article);
+		}
+
+		return list;
 	}
 
 	public static List<Article> getSportsCaipiaoInfo() {
@@ -320,6 +384,21 @@ public class CaipiaoService {
 
 		return list;
 	}
+	
+//	public static String getFuLiCaipiaoInfo() {
+//
+//		ConstantCaipiao.setIsPC(false);
+//
+//		String strThreeD = getThreeDInfo();
+//		String strShuangSeQiu = getShuangSeQiuInfo();
+//		String strSevenHappy = getSevenHappyInfo();
+//
+//		StringBuffer buffer = new StringBuffer();
+//		buffer.append(strThreeD).append(strShuangSeQiu).append(strSevenHappy);
+//
+//		return buffer.toString();
+//	}
+	
 	// public static String getSportsCaipiaoInfo() {
 	//
 	// ConstantCaipiao.setIsPC(false);

@@ -109,7 +109,22 @@ public class CoreService {
 					}
 				// 福利彩票查询
 				} else if (reqContent.equals("3")) {
-					respContent = CaipiaoService.getFuLiCaipiaoInfo();
+					
+		            List<Article> articleList = CaipiaoService.getFuLiCaipiaoInfo();
+
+		            NewsMessage newsMessage = new NewsMessage();
+
+		            newsMessage.setToUserName(fromUserName);
+		            newsMessage.setFromUserName(toUserName);
+		            newsMessage.setCreateTime(new Date().getTime());
+		            newsMessage.setMsgType("news");
+		            newsMessage.setFuncFlag(0);
+
+		            newsMessage.setArticleCount(articleList.size());
+		            newsMessage.setArticles(articleList);
+
+		            return SignUtil.encryptMsg(MessageUtil.newsMessageToXml(newsMessage), nonce, timestamp);
+		            
 				//体育彩票查询 
 				} else  if (reqContent.equals("4")) {
 		            List<Article> articleList = CaipiaoService.getSportsCaipiaoInfo();
