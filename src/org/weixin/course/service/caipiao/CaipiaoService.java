@@ -290,28 +290,28 @@ public class CaipiaoService {
 				article.setTitle(info);
 				article.setDescription("");
 				article.setPicUrl("http://a2.qpic.cn/psb?/V14Tfb4s4TxSWi/Ei2X27enXgTVdVxkxmxAebN51GcVOf3DcTVfrAAVGBQ!/b/dBTx8KbqMgAA&bo=UABRAAAAAAAFByU!&rf=viewer_4");
-				article.setUrl("");
+				article.setUrl("http://www.xutian-technology.com:8080/weixinCourse_sp/caipiao/dlt.do");
 				break;
 			case 1:
 				info = getPaiLieSanInfo();
 				article.setTitle(info);
 				article.setDescription("");
 				article.setPicUrl("http://a2.qpic.cn/psb?/V14Tfb4s4TxSWi/.FXa6jGQdQrXSQm7DFI*nQWqxDb4Nvu5E3Yn9qzv0Gk!/b/dDXF6qYGMwAA&bo=UAA*AAAAAAAFB0s!&rf=viewer_4");
-				article.setUrl("");
+				article.setUrl("http://www.xutian-technology.com:8080/weixinCourse_sp/caipiao/pls.do");
 				break;
 			case 2:
 				info = getPaiLieFiveInfo();
 				article.setTitle(info);
 				article.setDescription("");
 				article.setPicUrl("http://a3.qpic.cn/psb?/V14Tfb4s4TxSWi/aNkSlokxQgzIk1MAKImloYQy9nv1O6VDoIjSoMLEYNo!/b/dCNTg6cVHQAA&bo=UABaAAAAAAAFBy4!&rf=viewer_4");
-				article.setUrl("");
+				article.setUrl("http://www.xutian-technology.com:8080/weixinCourse_sp/caipiao/plw.do");
 				break;
 			case 3:
 				info = getSevenStarInfo();
 				article.setTitle(info);
 				article.setDescription("");
 				article.setPicUrl("http://a2.qpic.cn/psb?/V14Tfb4s4TxSWi/nu5Jiq0646ywmLovzwxy6lUoB.G0RvQbDpv2fBG1TKg!/b/dFXR8KZpKwAA&bo=UABOAAAAAAAFBzo!&rf=viewer_4");
-				article.setUrl("");
+				article.setUrl("http://www.xutian-technology.com:8080/weixinCourse_sp/caipiao/qx.do");
 				break;
 			}
 
