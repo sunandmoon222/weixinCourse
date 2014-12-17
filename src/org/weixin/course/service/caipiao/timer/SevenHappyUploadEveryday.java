@@ -173,7 +173,11 @@ public class SevenHappyUploadEveryday {
 			FileInputStream input = new FileInputStream(file);
 			@SuppressWarnings("unchecked")
 			ArrayList<CaipiaoBaseBean> list = (ArrayList<CaipiaoBaseBean>)xsBase.fromXML(input);
-			list.remove(9);
+			if (list.get(0).getOpenTime().equals(bean.getOpenTime())) {
+				list.remove(0);
+			} else {
+				list.remove(9);
+			}
 			list.add(0, bean);
 
 			OutputStream fs = new FileOutputStream(file);
