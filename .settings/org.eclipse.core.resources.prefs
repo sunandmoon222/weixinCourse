@@ -1,3 +1,4 @@
 eclipse.preferences.version=1
-encoding//src/org/weixin/course/service/tax/timer/Tax.java=UTF-8
+encoding//src/org/weixin/course/service/tax/TaxService.java=UTF-8
+encoding//src/org/weixin/course/service/tax/timer/TaxTimer.java=UTF-8
 encoding/<project>=UTF-8

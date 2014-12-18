@@ -17,7 +17,7 @@ public class MenuContent {
 		buffer.append("<a href=\"http://wzcx.runsky.com\">5 违章查询</a>").append("\n");
 		buffer.append("6 历史上的今天").append("\n");
 		buffer.append("7  人脸识别").append("\n");
-		buffer.append("8  聊天唠嗑").append("\n");
+		buffer.append("8 大连地区发票中奖查询 ").append("\n");
 		buffer.append("<a href=\"http://120.27.33.23/demo/index.jsp\">9 熊大的网页</a>").append("\n\n");
 		buffer.append("回复“?”显示此帮助菜单");
 		return buffer.toString();

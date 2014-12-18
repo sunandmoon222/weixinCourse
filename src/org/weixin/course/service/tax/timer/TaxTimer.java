@@ -17,7 +17,7 @@ import org.weixin.course.service.tax.bean.TaxBeanList;
 
 import com.thoughtworks.xstream.XStream;
 
-public class Tax {
+public class TaxTimer {
 
 	private List<TaxBean> list = new ArrayList<TaxBean>();
 
@@ -108,7 +108,7 @@ public class Tax {
 	}
 
 	public static void main(String[] args) {
-		Tax tax = new Tax();
+		TaxTimer tax = new TaxTimer();
 		tax.makeData();
 		tax.makeXml();
 

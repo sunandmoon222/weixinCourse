@@ -15,6 +15,7 @@ import org.weixin.course.message.resp.TextMessage;
 import org.weixin.course.service.caipiao.CaipiaoService;
 import org.weixin.course.service.history.TodayInHistoryService;
 import org.weixin.course.service.menu.MenuContent;
+import org.weixin.course.service.tax.TaxService;
 import org.weixin.course.service.weather.WeatherService;
 import org.weixin.course.servlet.SignUtil;
 /**
@@ -144,7 +145,25 @@ public class CoreService {
 				//历史上的今天
 				} else if (reqContent.equals("6")) {
 					respContent = TodayInHistoryService.getTodayInHistoryInfo();
-				}else {
+				//大连地区发票中奖查询
+				} else if (reqContent.equals("8")) { 
+				
+		            List<Article> articleList = TaxService.getTaxInfo();
+		            
+		            NewsMessage newsMessage = new NewsMessage();
+
+		            newsMessage.setToUserName(fromUserName);
+		            newsMessage.setFromUserName(toUserName);
+		            newsMessage.setCreateTime(new Date().getTime());
+		            newsMessage.setMsgType("news");
+		            newsMessage.setFuncFlag(0);
+
+		            newsMessage.setArticleCount(articleList.size());
+		            newsMessage.setArticles(articleList);
+
+		            return SignUtil.encryptMsg(MessageUtil.newsMessageToXml(newsMessage), nonce, timestamp);
+					
+				} else {
 					respContent = "您发送的是文本消息！";
 				}
 			}
