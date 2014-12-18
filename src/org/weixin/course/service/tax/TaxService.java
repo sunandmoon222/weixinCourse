@@ -53,23 +53,24 @@ public class TaxService {
 		xs.alias("TaxBeanList", TaxBeanList.class);
 		ArrayList<TaxBean> list = (ArrayList<TaxBean>)xs.fromXML(input);
 
-		buffer.append("一等奖"+list.get(0).getCount()+"名，奖金60万元\n")
-			  .append("中奖发票号码：\n");
-
-		for (int i = 0; i < list.get(0).getList().size(); i++) {
-			buffer.append(emoji(0x1F4B0) + "发票代码：" + list.get(0).getList().get(i).getCode()).append("\n");
-			buffer.append("     "+ "发票号码：" + list.get(0).getList().get(i).getNum()).append("\n");
-		}
-		buffer.append("\n");
+		buffer.append("一等奖"+list.get(0).getCount()+"名，奖金60万元\n\n")
+			  .append("二等奖"+list.get(1).getCount()+"名，奖金20万元\n\n")
+			  .append("三等奖"+list.get(2).getCount()+"名，奖金10万元\n\n")
+			  .append("四等奖"+list.get(3).getCount()+"名，奖金5万元\n\n")
+			  .append("五等奖"+list.get(4).getCount()+"名，奖金1万元\n\n")
+			  .append("六等奖"+list.get(5).getCount()+"名，奖金5千元\n\n")
+			  .append("七等奖"+list.get(6).getCount()+"名，奖金1千元\n\n");
+//		for (int i = 0; i < list.get(0).getList().size(); i++) {
+//			buffer.append(emoji(0x1F4B0) + "发票代码：" + list.get(0).getList().get(i).getCode()).append("\n");
+//			buffer.append("     "+ "发票号码：" + list.get(0).getList().get(i).getNum()).append("\n");
+//		}
+//		buffer.append("\n");
 		
 		
-		buffer.append("二等奖"+list.get(1).getCount()+"名，奖金20万元\n")
-			  .append("中奖发票号码：\n");
-		for (int j = 0; j < list.get(1).getList().size(); j++) {
-			buffer.append(emoji(0x1F4B0) + "发票代码：" + list.get(0).getList().get(j).getCode()).append("\n");
-			buffer.append("     "+ "发票号码：" + list.get(0).getList().get(j).getNum()).append("\n");
-		}		
-		buffer.append("\n\n");
+//		for (int j = 0; j < list.get(1).getList().size(); j++) {
+//			buffer.append(emoji(0x1F4B0) + "发票代码：" + list.get(0).getList().get(j).getCode()).append("\n");
+//			buffer.append("     "+ "发票号码：" + list.get(0).getList().get(j).getNum()).append("\n");
+//		}		
 	
 		buffer.append("查询自己是否中奖请点击进入" + emoji(0X1F449));
 		
