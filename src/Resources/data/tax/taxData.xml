@@ -1,0 +1,1619 @@
+<list>
+  <TaxBean>
+    <id>一等奖</id>
+    <count>2</count>
+    <list>
+      <TaxBeanList>
+        <code>221021423302</code>
+        <num>10044775</num>
+        <payee>大连经济技术开发区西山市场比家好小吃部。 </payee>
+      </TaxBeanList>
+      <TaxBeanList>
+        <code>221021322102</code>
+        <num>24383082</num>
+        <payee>大连燃料有限责任公司。 </payee>
+      </TaxBeanList>
+    </list>
+  </TaxBean>
+  <TaxBean>
+    <id>二等奖</id>
+    <count>1</count>
+    <list>
+      <TaxBeanList>
+        <code>221021422101</code>
+        <num>10572265</num>
+        <payee>大连金州新区民大教育培训中心。 </payee>
+      </TaxBeanList>
+    </list>
+  </TaxBean>
+  <TaxBean>
+    <id>三等奖</id>
+    <count>2</count>
+    <list>
+      <TaxBeanList>
+        <code>221021322102</code>
+        <num>24964930</num>
+        <payee>大连医大口腔有限公司五四路门诊部。 </payee>
+      </TaxBeanList>
+      <TaxBeanList>
+        <code>221021422101</code>
+        <num>11915570</num>
+        <payee>大连好旺角房屋经纪有限公司。 </payee>
+      </TaxBeanList>
+    </list>
+  </TaxBean>
+  <TaxBean>
+    <id>四等奖</id>
+    <count>7</count>
+    <list>
+      <TaxBeanList>
+        <code>221021323302</code>
+        <num>27983736</num>
+        <payee>长海县海洋乡越海饭店。 </payee>
+      </TaxBeanList>
+      <TaxBeanList>
+        <code>221021422101</code>
+        <num>10710015</num>
+        <payee>大连张前特易购置业有限公司。 </payee>
+      </TaxBeanList>
+      <TaxBeanList>
+        <code>221021422101</code>
+        <num>10620958</num>
+        <payee>大连旅开机动车驾驶员培训有限公司。 </payee>
+      </TaxBeanList>
+      <TaxBeanList>
+        <code>221021322102</code>
+        <num>26588288</num>
+        <payee>大连金发地市场管理有限公司。 </payee>
+      </TaxBeanList>
+      <TaxBeanList>
+        <code>221021322102</code>
+        <num>27910347</num>
+        <payee>大连凯尔富物业管理有限责任公司。 </payee>
+      </TaxBeanList>
+      <TaxBeanList>
+        <code>221021322102</code>
+        <num>27810911</num>
+        <payee>大连高新园区邦信小额贷款有限公司。 </payee>
+      </TaxBeanList>
+      <TaxBeanList>
+        <code>221021322102</code>
+        <num>14211104</num>
+        <payee>大连沙河口赵军口腔和平广场门诊部。 </payee>
+      </TaxBeanList>
+    </list>
+  </TaxBean>
+  <TaxBean>
+    <id>五等奖</id>
+    <count>43</count>
+    <list>
+      <TaxBeanList>
+        <code>221021323304</code>
+        <num>17357623</num>
+        <payee>大连元通劳动服务中心。 </payee>
+      </TaxBeanList>
+      <TaxBeanList>
+        <code>221021323305</code>
+        <num>14398135</num>
+        <payee>大连市中山区江户前日本料理友谊店。 </payee>
+      </TaxBeanList>
+      <TaxBeanList>
+        <code>221021323302</code>
+        <num>27429646</num>
+        <payee>大连市金州区腾飞彩艺工作室。 </payee>
+      </TaxBeanList>
+      <TaxBeanList>
+        <code>221021422101</code>
+        <num>10310414</num>
+        <payee>大连胜利机动车驾驶员培训有限公司。 </payee>
+      </TaxBeanList>
+      <TaxBeanList>
+        <code>221021422101</code>
+        <num>10346050</num>
+        <payee>大连机车商业城有限公司。 </payee>
+      </TaxBeanList>
+      <TaxBeanList>
+        <code>221021422101</code>
+        <num>10504461</num>
+        <payee>大连经济技术开发区瑞信小额贷款有限公司。 </payee>
+      </TaxBeanList>
+      <TaxBeanList>
+        <code>221021323302</code>
+        <num>27405364</num>
+        <payee>大连市金州区站前益家旅店。 </payee>
+      </TaxBeanList>
+      <TaxBeanList>
+        <code>221021323302</code>
+        <num>27264894</num>
+        <payee>大连市甘井子区泡崖街道兴崖隆水饺馆。 </payee>
+      </TaxBeanList>
+      <TaxBeanList>
+        <code>221021323302</code>
+        <num>27194950</num>
+        <payee>大连市甘井子区华中街海底捞饭店。 </payee>
+      </TaxBeanList>
+      <TaxBeanList>
+        <code>221021322102</code>
+        <num>27960115</num>
+        <payee>大连高新园区后英科技小额贷款有限公司。 </payee>
+      </TaxBeanList>
+      <TaxBeanList>
+        <code>221021322102</code>
+        <num>27882703</num>
+        <payee>大连亿达物业管理有限公司。 </payee>
+      </TaxBeanList>
+      <TaxBeanList>
+        <code>221021422101</code>
+        <num>10576011</num>
+        <payee>大连金玛商城企业集团有限公司。 </payee>
+      </TaxBeanList>
+      <TaxBeanList>
+        <code>221021422101</code>
+        <num>10578871</num>
+        <payee>大连经济技术开发区万佳物业管理有限公司万国宫馆分公司。 </payee>
+      </TaxBeanList>
+      <TaxBeanList>
+        <code>221021422101</code>
+        <num>11003823</num>
+        <payee>大连锦联大厦有限公司。 </payee>
+      </TaxBeanList>
+      <TaxBeanList>
+        <code>221021422101</code>
+        <num>11084860</num>
+        <payee>大连市培根学校。 </payee>
+      </TaxBeanList>
+      <TaxBeanList>
+        <code>221021422101</code>
+        <num>11657849</num>
+        <payee>大连庄河汇商小额贷款有限公司。 </payee>
+      </TaxBeanList>
+      <TaxBeanList>
+        <code>221021423303</code>
+        <num>10171544</num>
+        <payee>大连东海招待所。 </payee>
+      </TaxBeanList>
+      <TaxBeanList>
+        <code>221021423303</code>
+        <num>10190012</num>
+        <payee>大连市西岗区亿盛达饭店。 </payee>
+      </TaxBeanList>
+      <TaxBeanList>
+        <code>221021423303</code>
+        <num>10444540</num>
+        <payee>大连市旅顺口区传东饭店。 </payee>
+      </TaxBeanList>
+      <TaxBeanList>
+        <code>221021423303</code>
+        <num>10881859</num>
+        <payee>大连市甘井子区山东路昂琦洗染店。 </payee>
+      </TaxBeanList>
+      <TaxBeanList>
+        <code>221021423303</code>
+        <num>10893439</num>
+        <payee>大连市甘井子区芳韵街一品烧烤店。 </payee>
+      </TaxBeanList>
+      <TaxBeanList>
+        <code>221021322102</code>
+        <num>27611339</num>
+        <payee>大连同进房产咨询有限公司。 </payee>
+      </TaxBeanList>
+      <TaxBeanList>
+        <code>221021322102</code>
+        <num>23915606</num>
+        <payee>大连盛麟商贸有限公司。 </payee>
+      </TaxBeanList>
+      <TaxBeanList>
+        <code>221021322102</code>
+        <num>11873808</num>
+        <payee>大连市中山区第十五中学业余美术学校。 </payee>
+      </TaxBeanList>
+      <TaxBeanList>
+        <code>221021322102</code>
+        <num>16671356</num>
+        <payee>大连市沙河口区百姓建鑫市场。 </payee>
+      </TaxBeanList>
+      <TaxBeanList>
+        <code>221021322102</code>
+        <num>17647366</num>
+        <payee>大连市中山区岭前街口腔诊所。 </payee>
+      </TaxBeanList>
+      <TaxBeanList>
+        <code>221021322102</code>
+        <num>18629839</num>
+        <payee>大连链家房地产经纪有限公司。 </payee>
+      </TaxBeanList>
+      <TaxBeanList>
+        <code>221021322102</code>
+        <num>18731058</num>
+        <payee>大连万国国际经济合作有限公司。 </payee>
+      </TaxBeanList>
+      <TaxBeanList>
+        <code>221021322102</code>
+        <num>18751168</num>
+        <payee>大连汇金大厦有限公司。 </payee>
+      </TaxBeanList>
+      <TaxBeanList>
+        <code>221021322102</code>
+        <num>18807521</num>
+        <payee>瓦房店市公证处。 </payee>
+      </TaxBeanList>
+      <TaxBeanList>
+        <code>221021322102</code>
+        <num>18815327</num>
+        <payee>瓦房店金百合宾馆。 </payee>
+      </TaxBeanList>
+      <TaxBeanList>
+        <code>221021322102</code>
+        <num>18824250</num>
+        <payee>大连腾业物业管理有限公司。 </payee>
+      </TaxBeanList>
+      <TaxBeanList>
+        <code>221021322102</code>
+        <num>27856024</num>
+        <payee>大连高新万达广场投资有限公司。 </payee>
+      </TaxBeanList>
+      <TaxBeanList>
+        <code>221021322102</code>
+        <num>24823606</num>
+        <payee>民办大连阳光学校。 </payee>
+      </TaxBeanList>
+      <TaxBeanList>
+        <code>221021322102</code>
+        <num>27637772</num>
+        <payee>大连润德机动车检测有限公司。 </payee>
+      </TaxBeanList>
+      <TaxBeanList>
+        <code>221021322102</code>
+        <num>26064904</num>
+        <payee>大连圣汐湾物业服务有限公司。 </payee>
+      </TaxBeanList>
+      <TaxBeanList>
+        <code>221021322102</code>
+        <num>25594709</num>
+        <payee>大连月星家居广场有限公司。 </payee>
+      </TaxBeanList>
+      <TaxBeanList>
+        <code>221021322102</code>
+        <num>24922891</num>
+        <payee>大连享成物业管理中心。 </payee>
+      </TaxBeanList>
+      <TaxBeanList>
+        <code>221021322102</code>
+        <num>23916118</num>
+        <payee>大连太平洋渔港至尊大酒店。 </payee>
+      </TaxBeanList>
+      <TaxBeanList>
+        <code>221021322102</code>
+        <num>24387056</num>
+        <payee>西岗区百年老街味道饭店。 </payee>
+      </TaxBeanList>
+      <TaxBeanList>
+        <code>221021322102</code>
+        <num>24383902</num>
+        <payee>大连金广物业服务有限公司。 </payee>
+      </TaxBeanList>
+      <TaxBeanList>
+        <code>221021322102</code>
+        <num>24366103</num>
+        <payee>大连市人力资源服务中心。 </payee>
+      </TaxBeanList>
+      <TaxBeanList>
+        <code>221021322102</code>
+        <num>24631357</num>
+        <payee>大连市风景园林处。 </payee>
+      </TaxBeanList>
+    </list>
+  </TaxBean>
+  <TaxBean>
+    <id>六等奖</id>
+    <count>75</count>
+    <list>
+      <TaxBeanList>
+        <code>221021323305</code>
+        <num>16558158</num>
+        <payee>大连市甘井子区富强路佳印图文设计室。 </payee>
+      </TaxBeanList>
+      <TaxBeanList>
+        <code>221021323305</code>
+        <num>15056881</num>
+        <payee>大连市沙河口区喜家德水饺幸福一家店。 </payee>
+      </TaxBeanList>
+      <TaxBeanList>
+        <code>221021323305</code>
+        <num>15090578</num>
+        <payee>大连新天地广场海边城外烤全鱼饭店。 </payee>
+      </TaxBeanList>
+      <TaxBeanList>
+        <code>221021323305</code>
+        <num>16019438</num>
+        <payee>阳光人寿保险股份有限公司大连分公司。 </payee>
+      </TaxBeanList>
+      <TaxBeanList>
+        <code>221021422101</code>
+        <num>10134164</num>
+        <payee>大连人才派遣服务有限公司。 </payee>
+      </TaxBeanList>
+      <TaxBeanList>
+        <code>221021422101</code>
+        <num>10035706</num>
+        <payee>大连阿斯顿未来英语培训学校。 </payee>
+      </TaxBeanList>
+      <TaxBeanList>
+        <code>221021422101</code>
+        <num>10132499</num>
+        <payee>大连市沙河口区上岛咖啡店五四广场店。 </payee>
+      </TaxBeanList>
+      <TaxBeanList>
+        <code>221021422101</code>
+        <num>10278914</num>
+        <payee>大连市沙河口区宝宝小海鲜烧烤店。 </payee>
+      </TaxBeanList>
+      <TaxBeanList>
+        <code>221021422101</code>
+        <num>10324012</num>
+        <payee>大连新天地百货有限公司。 </payee>
+      </TaxBeanList>
+      <TaxBeanList>
+        <code>221021323305</code>
+        <num>14603591</num>
+        <payee>大连市中山区第一碗家乐福快餐店。 </payee>
+      </TaxBeanList>
+      <TaxBeanList>
+        <code>221021323304</code>
+        <num>18144174</num>
+        <payee>大连和平广场米斯特比萨餐厅。 </payee>
+      </TaxBeanList>
+      <TaxBeanList>
+        <code>221021323304</code>
+        <num>17770368</num>
+        <payee>庄河市鑫来阁饭店。 </payee>
+      </TaxBeanList>
+      <TaxBeanList>
+        <code>221021323304</code>
+        <num>17465853</num>
+        <payee>大连高新园区福聚家常菜馆。 </payee>
+      </TaxBeanList>
+      <TaxBeanList>
+        <code>221021323303</code>
+        <num>29403195</num>
+        <payee>大连瑞达停车服务有限公司。 </payee>
+      </TaxBeanList>
+      <TaxBeanList>
+        <code>221021323302</code>
+        <num>27872211</num>
+        <payee>大连金凤凰养生会馆。 </payee>
+      </TaxBeanList>
+      <TaxBeanList>
+        <code>221021323302</code>
+        <num>27431231</num>
+        <payee>大连市金州区诚丰电信营业厅。 </payee>
+      </TaxBeanList>
+      <TaxBeanList>
+        <code>221021323302</code>
+        <num>27268399</num>
+        <payee>大连市甘井子区营城子街道家盈家政服务部。 </payee>
+      </TaxBeanList>
+      <TaxBeanList>
+        <code>221021323302</code>
+        <num>27205793</num>
+        <payee>大连周水子空港雨蒙行李打包处。 </payee>
+      </TaxBeanList>
+      <TaxBeanList>
+        <code>221021322102</code>
+        <num>27827157</num>
+        <payee>中国融资租赁有限公司。 </payee>
+      </TaxBeanList>
+      <TaxBeanList>
+        <code>221021422101</code>
+        <num>11657644</num>
+        <payee>庄河市劳动代理服务中心。 </payee>
+      </TaxBeanList>
+      <TaxBeanList>
+        <code>221021423304</code>
+        <num>11023314</num>
+        <payee>大连博原有限公司。 </payee>
+      </TaxBeanList>
+      <TaxBeanList>
+        <code>221021423303</code>
+        <num>11280705</num>
+        <payee>大连经济技术开发区富君农家菜海鲜馆。 </payee>
+      </TaxBeanList>
+      <TaxBeanList>
+        <code>221021423303</code>
+        <num>10578008</num>
+        <payee>大连市沙河口区创想视界影像工作室。 </payee>
+      </TaxBeanList>
+      <TaxBeanList>
+        <code>221021423303</code>
+        <num>10165669</num>
+        <payee>大连市西岗区东南鱼锅店。 </payee>
+      </TaxBeanList>
+      <TaxBeanList>
+        <code>221021423303</code>
+        <num>10149399</num>
+        <payee>大连市西岗区微喜咖啡厅。 </payee>
+      </TaxBeanList>
+      <TaxBeanList>
+        <code>221021423303</code>
+        <num>10043402</num>
+        <payee>庄河市鑫源海鲜坊。 </payee>
+      </TaxBeanList>
+      <TaxBeanList>
+        <code>221021422101</code>
+        <num>11708784</num>
+        <payee>大连经济技术开发区升达汽车驾驶员培训学校。 </payee>
+      </TaxBeanList>
+      <TaxBeanList>
+        <code>221021422101</code>
+        <num>11668430</num>
+        <payee>庄河市兴达驾驶员培训学校有限公司。 </payee>
+      </TaxBeanList>
+      <TaxBeanList>
+        <code>221021422101</code>
+        <num>10432277</num>
+        <payee>大连市沙河口区呼盟全羊饭店联合路店。 </payee>
+      </TaxBeanList>
+      <TaxBeanList>
+        <code>221021422101</code>
+        <num>11651680</num>
+        <payee>大连合纵创展房地产经纪有限公司。 </payee>
+      </TaxBeanList>
+      <TaxBeanList>
+        <code>221021422101</code>
+        <num>11005418</num>
+        <payee>大连同益房产咨询有限公司。 </payee>
+      </TaxBeanList>
+      <TaxBeanList>
+        <code>221021422101</code>
+        <num>10741492</num>
+        <payee>大连瑞雪典当有限公司。 </payee>
+      </TaxBeanList>
+      <TaxBeanList>
+        <code>221021422101</code>
+        <num>10544981</num>
+        <payee>大连远洋基业物业管理有限公司。 </payee>
+      </TaxBeanList>
+      <TaxBeanList>
+        <code>221021422101</code>
+        <num>10532206</num>
+        <payee>大连金广嘉亿置地有限公司。 </payee>
+      </TaxBeanList>
+      <TaxBeanList>
+        <code>221021422101</code>
+        <num>10529692</num>
+        <payee>大连经济技术开发区马桥子华晟山城酒店。 </payee>
+      </TaxBeanList>
+      <TaxBeanList>
+        <code>221021422101</code>
+        <num>10510485</num>
+        <payee>大连凯伦温泉酒店有限公司。 </payee>
+      </TaxBeanList>
+      <TaxBeanList>
+        <code>221021422101</code>
+        <num>10472270</num>
+        <payee>大连市沙河口区金浪莎休闲酒店。 </payee>
+      </TaxBeanList>
+      <TaxBeanList>
+        <code>221021322102</code>
+        <num>18826463</num>
+        <payee>大连正义司法鉴定中心。 </payee>
+      </TaxBeanList>
+      <TaxBeanList>
+        <code>221021322102</code>
+        <num>18813284</num>
+        <payee>瓦房店市新海润大酒店。 </payee>
+      </TaxBeanList>
+      <TaxBeanList>
+        <code>221021322102</code>
+        <num>24060720</num>
+        <payee>大连邮政宾馆。 </payee>
+      </TaxBeanList>
+      <TaxBeanList>
+        <code>221021322102</code>
+        <num>23994006</num>
+        <payee>上外（大连）人力资源服务有限公司。 </payee>
+      </TaxBeanList>
+      <TaxBeanList>
+        <code>221021322102</code>
+        <num>23974773</num>
+        <payee>大连志成文化培训学校。 </payee>
+      </TaxBeanList>
+      <TaxBeanList>
+        <code>221021322102</code>
+        <num>23949564</num>
+        <payee>大连经济技术开发区嘉兴物业管理有限公司。 </payee>
+      </TaxBeanList>
+      <TaxBeanList>
+        <code>221021322102</code>
+        <num>23098478</num>
+        <payee>大连和平广场酷宝贝儿童摄影中心。 </payee>
+      </TaxBeanList>
+      <TaxBeanList>
+        <code>221021322102</code>
+        <num>18828960</num>
+        <payee>瓦房店市共济办事处新大地春饼店。 </payee>
+      </TaxBeanList>
+      <TaxBeanList>
+        <code>221021322102</code>
+        <num>18828432</num>
+        <payee>瓦房店市共济街道铭记金牌家常菜馆。 </payee>
+      </TaxBeanList>
+      <TaxBeanList>
+        <code>221021322102</code>
+        <num>18815955</num>
+        <payee>瓦房店市翠峰苑火锅店。 </payee>
+      </TaxBeanList>
+      <TaxBeanList>
+        <code>221021322102</code>
+        <num>24065373</num>
+        <payee>大连市中山区灵睿图文设计室。 </payee>
+      </TaxBeanList>
+      <TaxBeanList>
+        <code>221021322102</code>
+        <num>18812505</num>
+        <payee>大连正义汽车鉴定评估有限公司。 </payee>
+      </TaxBeanList>
+      <TaxBeanList>
+        <code>221021322102</code>
+        <num>18806054</num>
+        <payee>瓦房店市劳动代理服务中心。 </payee>
+      </TaxBeanList>
+      <TaxBeanList>
+        <code>221021322102</code>
+        <num>18760564</num>
+        <payee>大连金州三里桥农副产品综合批发市场管理有限公司。 </payee>
+      </TaxBeanList>
+      <TaxBeanList>
+        <code>221021322102</code>
+        <num>18635635</num>
+        <payee>大连医大口腔有限公司中山路门诊部。 </payee>
+      </TaxBeanList>
+      <TaxBeanList>
+        <code>221021322102</code>
+        <num>18618119</num>
+        <payee>大连大商物资储运有限公司。 </payee>
+      </TaxBeanList>
+      <TaxBeanList>
+        <code>221021322102</code>
+        <num>18603736</num>
+        <payee>大商集团有限公司大连机场前菜果百货分公司。 </payee>
+      </TaxBeanList>
+      <TaxBeanList>
+        <code>221021322102</code>
+        <num>16144921</num>
+        <payee>大连市天健坤顺古玩城。 </payee>
+      </TaxBeanList>
+      <TaxBeanList>
+        <code>221021322102</code>
+        <num>10712247</num>
+        <payee>国富期货有限公司。 </payee>
+      </TaxBeanList>
+      <TaxBeanList>
+        <code>221021322102</code>
+        <num>27199245</num>
+        <payee>大连豪景酒店物业管理有限公司。 </payee>
+      </TaxBeanList>
+      <TaxBeanList>
+        <code>221021322102</code>
+        <num>24400895</num>
+        <payee>大连金玛商品批发城有限公司。 </payee>
+      </TaxBeanList>
+      <TaxBeanList>
+        <code>221021322102</code>
+        <num>26828965</num>
+        <payee>大连联邦雅思英语培训学校。 </payee>
+      </TaxBeanList>
+      <TaxBeanList>
+        <code>221021322102</code>
+        <num>26244285</num>
+        <payee>大连中山诚嘉教育培训学校。 </payee>
+      </TaxBeanList>
+      <TaxBeanList>
+        <code>221021322102</code>
+        <num>24929450</num>
+        <payee>大连市甘井子区大连湾街道呼盟全羊馆。 </payee>
+      </TaxBeanList>
+      <TaxBeanList>
+        <code>221021322102</code>
+        <num>24904467</num>
+        <payee>大连安盛经营管理有限公司安盛沃特时尚广场。 </payee>
+      </TaxBeanList>
+      <TaxBeanList>
+        <code>221021322102</code>
+        <num>24868417</num>
+        <payee>大连市中山区老杨家吊炉饼店。 </payee>
+      </TaxBeanList>
+      <TaxBeanList>
+        <code>221021322102</code>
+        <num>24740685</num>
+        <payee>大连鑫泉科教咨询有限公司。 </payee>
+      </TaxBeanList>
+      <TaxBeanList>
+        <code>221021322102</code>
+        <num>24700715</num>
+        <payee>大连市中山区独门冲烤鱼店。 </payee>
+      </TaxBeanList>
+      <TaxBeanList>
+        <code>221021322102</code>
+        <num>24402698</num>
+        <payee>大连达肯职业高级中学。 </payee>
+      </TaxBeanList>
+      <TaxBeanList>
+        <code>221021322102</code>
+        <num>24102716</num>
+        <payee>大商股份有限公司贸易大世界。 </payee>
+      </TaxBeanList>
+      <TaxBeanList>
+        <code>221021322102</code>
+        <num>24378802</num>
+        <payee>大连市西岗区锦宴楼大酒店。 　　</payee>
+      </TaxBeanList>
+      <TaxBeanList>
+        <code>221021322102</code>
+        <num>24374400</num>
+        <payee>大连市西岗区紫航海鲜酒店。 </payee>
+      </TaxBeanList>
+      <TaxBeanList>
+        <code>221021322102</code>
+        <num>24371360</num>
+        <payee>大连建国肿瘤医院有限公司。 </payee>
+      </TaxBeanList>
+      <TaxBeanList>
+        <code>221021322102</code>
+        <num>24367792</num>
+        <payee>大商集团有限公司大连水果分公司。 </payee>
+      </TaxBeanList>
+      <TaxBeanList>
+        <code>221021322102</code>
+        <num>24348974</num>
+        <payee>大连香洲房地产开发集团有限公司香洲花园酒店。 </payee>
+      </TaxBeanList>
+      <TaxBeanList>
+        <code>221021322102</code>
+        <num>24326198</num>
+        <payee>大连友谊集团奥林匹克购物广场有限公司。 </payee>
+      </TaxBeanList>
+      <TaxBeanList>
+        <code>221021322102</code>
+        <num>24309428</num>
+        <payee>大连市西岗区彤德莱火锅店。 </payee>
+      </TaxBeanList>
+      <TaxBeanList>
+        <code>221021322102</code>
+        <num>24164664</num>
+        <payee>南京途牛国际旅行社有限公司大连分公司。 </payee>
+      </TaxBeanList>
+    </list>
+  </TaxBean>
+  <TaxBean>
+    <id>七等奖</id>
+    <count>185</count>
+    <list>
+      <TaxBeanList>
+        <code>221021323304</code>
+        <num>18312857</num>
+        <payee>大连市中山区傅氏图文设计社。 </payee>
+      </TaxBeanList>
+      <TaxBeanList>
+        <code>221021323305</code>
+        <num>10791157</num>
+        <payee>大连港股份有限公司。 </payee>
+      </TaxBeanList>
+      <TaxBeanList>
+        <code>221021323304</code>
+        <num>17925049</num>
+        <payee>大连市西岗区田缘饭店。 </payee>
+      </TaxBeanList>
+      <TaxBeanList>
+        <code>221021323305</code>
+        <num>14614324</num>
+        <payee>大连市中山区乡思园饭店。 </payee>
+      </TaxBeanList>
+      <TaxBeanList>
+        <code>221021323305</code>
+        <num>15393635</num>
+        <payee>大连安盛沃特时尚广场九福临门九龙茶餐厅。 </payee>
+      </TaxBeanList>
+      <TaxBeanList>
+        <code>221021323305</code>
+        <num>16020309</num>
+        <payee>大连新梦歌舞酒楼。 </payee>
+      </TaxBeanList>
+      <TaxBeanList>
+        <code>221021323304</code>
+        <num>17523996</num>
+        <payee>大连高新园区凌水高记春饼店。 </payee>
+      </TaxBeanList>
+      <TaxBeanList>
+        <code>221021323304</code>
+        <num>17329518</num>
+        <payee>大连市甘井子区味艺轩烤肉店。 </payee>
+      </TaxBeanList>
+      <TaxBeanList>
+        <code>221021323304</code>
+        <num>17316370</num>
+        <payee>大连市甘井子区建青服务社北站停车场。 </payee>
+      </TaxBeanList>
+      <TaxBeanList>
+        <code>221021323304</code>
+        <num>17258038</num>
+        <payee>张海波。 </payee>
+      </TaxBeanList>
+      <TaxBeanList>
+        <code>221021323304</code>
+        <num>16555409</num>
+        <payee>辽宁出入境检验检疫局检疫处理技术中心。 </payee>
+      </TaxBeanList>
+      <TaxBeanList>
+        <code>221021422101</code>
+        <num>10216611</num>
+        <payee>大连北方金达汽车驾驶培训学校有限公司。 </payee>
+      </TaxBeanList>
+      <TaxBeanList>
+        <code>221021422101</code>
+        <num>10272710</num>
+        <payee>大连市潮悦国际酒店有限公司。 </payee>
+      </TaxBeanList>
+      <TaxBeanList>
+        <code>221021422101</code>
+        <num>10256503</num>
+        <payee>大连好管家物业管理有限公司万向城分公司。 </payee>
+      </TaxBeanList>
+      <TaxBeanList>
+        <code>221021422101</code>
+        <num>10244090</num>
+        <payee>大连市沙河口区渔福餐厅。 </payee>
+      </TaxBeanList>
+      <TaxBeanList>
+        <code>221021422101</code>
+        <num>10238045</num>
+        <payee>大连凯锦商用设施经营管理有限公司。 </payee>
+      </TaxBeanList>
+      <TaxBeanList>
+        <code>221021323305</code>
+        <num>16533195</num>
+        <payee>大连市甘井子区泡崖街道心意烧烤店。 </payee>
+      </TaxBeanList>
+      <TaxBeanList>
+        <code>221021422101</code>
+        <num>10204342</num>
+        <payee>大连新开园饭店。 </payee>
+      </TaxBeanList>
+      <TaxBeanList>
+        <code>221021422101</code>
+        <num>10177420</num>
+        <payee>大连市沙河口区新合声休闲广场。 </payee>
+      </TaxBeanList>
+      <TaxBeanList>
+        <code>221021422101</code>
+        <num>10154582</num>
+        <payee>大连盛食美今餐饮有限公司。 </payee>
+      </TaxBeanList>
+      <TaxBeanList>
+        <code>221021422101</code>
+        <num>10096304</num>
+        <payee>大连正源物业服务有限公司。 </payee>
+      </TaxBeanList>
+      <TaxBeanList>
+        <code>221021422101</code>
+        <num>10088184</num>
+        <payee>大连天兴物业管理有限公司。 </payee>
+      </TaxBeanList>
+      <TaxBeanList>
+        <code>221021422101</code>
+        <num>10284224</num>
+        <payee>大商股份有限公司大商超级市场马栏店。 </payee>
+      </TaxBeanList>
+      <TaxBeanList>
+        <code>221021322102</code>
+        <num>27919490</num>
+        <payee>大连高新园区彤德莱火锅数码路店。 </payee>
+      </TaxBeanList>
+      <TaxBeanList>
+        <code>221021322102</code>
+        <num>27942020</num>
+        <payee>大连阿娃娜云顶餐饮服务有限公司。 </payee>
+      </TaxBeanList>
+      <TaxBeanList>
+        <code>221021322102</code>
+        <num>27935079</num>
+        <payee>大连高新园区辣手餐饮店。 </payee>
+      </TaxBeanList>
+      <TaxBeanList>
+        <code>221021322102</code>
+        <num>27923329</num>
+        <payee>大连大华物业管理有限公司。 </payee>
+      </TaxBeanList>
+      <TaxBeanList>
+        <code>221021322102</code>
+        <num>27922706</num>
+        <payee>大连高新园区海边城外巫山烤全鱼饭店。 </payee>
+      </TaxBeanList>
+      <TaxBeanList>
+        <code>221021322102</code>
+        <num>27947739</num>
+        <payee>大连平和时代餐饮有限公司高新园区万达一分店。 </payee>
+      </TaxBeanList>
+      <TaxBeanList>
+        <code>221021322102</code>
+        <num>27904729</num>
+        <payee>大连新城浴酒店有限公司。 </payee>
+      </TaxBeanList>
+      <TaxBeanList>
+        <code>221021322102</code>
+        <num>27903170</num>
+        <payee>大连高新园区芙蓉轩渔人码头酒家。 </payee>
+      </TaxBeanList>
+      <TaxBeanList>
+        <code>221021322102</code>
+        <num>27902645</num>
+        <payee>大连龙海物业管理有限公司。 </payee>
+      </TaxBeanList>
+      <TaxBeanList>
+        <code>221021322102</code>
+        <num>27877694</num>
+        <payee>大连高新园区董记私家菜馆。 </payee>
+      </TaxBeanList>
+      <TaxBeanList>
+        <code>221021322102</code>
+        <num>27853220</num>
+        <payee>大连旅顺玉皇顶公墓有限公司。 </payee>
+      </TaxBeanList>
+      <TaxBeanList>
+        <code>221021323303</code>
+        <num>30257418</num>
+        <payee>大连瑞达停车服务有限公司和平停车场。 </payee>
+      </TaxBeanList>
+      <TaxBeanList>
+        <code>221021323302</code>
+        <num>27955534</num>
+        <payee>大连保税区格林小镇博源时尚客房。 </payee>
+      </TaxBeanList>
+      <TaxBeanList>
+        <code>221021323303</code>
+        <num>29413707</num>
+        <payee>大商股份有限公司新玛特购物休闲广场。 </payee>
+      </TaxBeanList>
+      <TaxBeanList>
+        <code>221021323303</code>
+        <num>28916170</num>
+        <payee>大连经济技术开发区益安国际商贸中心。 </payee>
+      </TaxBeanList>
+      <TaxBeanList>
+        <code>221021323303</code>
+        <num>27845303</num>
+        <payee>大连旅顺旅游集团有限公司。 </payee>
+      </TaxBeanList>
+      <TaxBeanList>
+        <code>221021323303</code>
+        <num>25584450</num>
+        <payee>大连金湾物业管理有限公司。 </payee>
+      </TaxBeanList>
+      <TaxBeanList>
+        <code>221021322102</code>
+        <num>27955780</num>
+        <payee>大连高新区达内职业培训学校。 </payee>
+      </TaxBeanList>
+      <TaxBeanList>
+        <code>221021323302</code>
+        <num>27866230</num>
+        <payee>大连经济技术开发区人力资源代理中心。 </payee>
+      </TaxBeanList>
+      <TaxBeanList>
+        <code>221021323302</code>
+        <num>27755153</num>
+        <payee>大连元通汽车服务有限公司。 </payee>
+      </TaxBeanList>
+      <TaxBeanList>
+        <code>221021323302</code>
+        <num>27628796</num>
+        <payee>大连市甘井子区兴达印花印字服务部。 </payee>
+      </TaxBeanList>
+      <TaxBeanList>
+        <code>221021323302</code>
+        <num>27264067</num>
+        <payee>大连立元洗浴中心。 </payee>
+      </TaxBeanList>
+      <TaxBeanList>
+        <code>221021322102</code>
+        <num>27958643</num>
+        <payee>大连开成烤肉餐饮有限公司。 </payee>
+      </TaxBeanList>
+      <TaxBeanList>
+        <code>221021322102</code>
+        <num>27843029</num>
+        <payee>大连鑫晟物业管理有限公司。 </payee>
+      </TaxBeanList>
+      <TaxBeanList>
+        <code>221021423303</code>
+        <num>10059514</num>
+        <payee>庄河市青堆镇富海源酒店。 </payee>
+      </TaxBeanList>
+      <TaxBeanList>
+        <code>221021423303</code>
+        <num>10183055</num>
+        <payee>大连市西岗区经典画框装裱店。 </payee>
+      </TaxBeanList>
+      <TaxBeanList>
+        <code>221021423303</code>
+        <num>10154590</num>
+        <payee>大连市西岗区瑞雪装饰部。 </payee>
+      </TaxBeanList>
+      <TaxBeanList>
+        <code>221021423303</code>
+        <num>10128091</num>
+        <payee>大连市西岗区吉尔森烤肉店。 </payee>
+      </TaxBeanList>
+      <TaxBeanList>
+        <code>221021423303</code>
+        <num>10111492</num>
+        <payee>大连市西岗区东北老菜馆。 </payee>
+      </TaxBeanList>
+      <TaxBeanList>
+        <code>221021423303</code>
+        <num>10559191</num>
+        <payee>大连市沙河口区滨雨餐厅。 </payee>
+      </TaxBeanList>
+      <TaxBeanList>
+        <code>221021423303</code>
+        <num>10055118</num>
+        <payee>庄河市鑫鑫快捷宾馆。 </payee>
+      </TaxBeanList>
+      <TaxBeanList>
+        <code>221021422101</code>
+        <num>11912347</num>
+        <payee>大连中山正融小额贷款有限公司。 </payee>
+      </TaxBeanList>
+      <TaxBeanList>
+        <code>221021422101</code>
+        <num>11826053</num>
+        <payee>大连经济技术开发区有全酒店。 </payee>
+      </TaxBeanList>
+      <TaxBeanList>
+        <code>221021422101</code>
+        <num>11742210</num>
+        <payee>大连安盛购物广场有限公司。 </payee>
+      </TaxBeanList>
+      <TaxBeanList>
+        <code>221021422101</code>
+        <num>11711771</num>
+        <payee>大连金科物业管理有限公司。 </payee>
+      </TaxBeanList>
+      <TaxBeanList>
+        <code>221021422101</code>
+        <num>11703565</num>
+        <payee>大连经济技术开发区红星渔村饭店。 </payee>
+      </TaxBeanList>
+      <TaxBeanList>
+        <code>221021423303</code>
+        <num>10597838</num>
+        <payee>大连市沙河口区平立面设计工作室。 </payee>
+      </TaxBeanList>
+      <TaxBeanList>
+        <code>221021423303</code>
+        <num>10673802</num>
+        <payee>大连市沙河口区高尔夫汽车美容会所。 </payee>
+      </TaxBeanList>
+      <TaxBeanList>
+        <code>221021423303</code>
+        <num>10739207</num>
+        <payee>大连市沙河口区夜蒲主题宾馆。 </payee>
+      </TaxBeanList>
+      <TaxBeanList>
+        <code>221021423303</code>
+        <num>10748421</num>
+        <payee>大连市沙河口区海蓝蓝家政服务部。 </payee>
+      </TaxBeanList>
+      <TaxBeanList>
+        <code>221021423303</code>
+        <num>10863280</num>
+        <payee>大连市甘井子区泉水街道好运来旅店锦泉源店。 </payee>
+      </TaxBeanList>
+      <TaxBeanList>
+        <code>221021423303</code>
+        <num>10880405</num>
+        <payee>大连市甘井子区甘井子街聚鑫园旅社。 </payee>
+      </TaxBeanList>
+      <TaxBeanList>
+        <code>221021423303</code>
+        <num>10894124</num>
+        <payee>大连市甘井子区刘氏心心烤肉店。 </payee>
+      </TaxBeanList>
+      <TaxBeanList>
+        <code>221021423303</code>
+        <num>11148946</num>
+        <payee>大连经济技术开发区五彩城诸葛烤鱼店。 </payee>
+      </TaxBeanList>
+      <TaxBeanList>
+        <code>221021423303</code>
+        <num>11419476</num>
+        <payee>大连市旅顺口区新月楼酒家。 </payee>
+      </TaxBeanList>
+      <TaxBeanList>
+        <code>221021423306</code>
+        <num>11010126</num>
+        <payee>沙河口区金朗杰装饰设计策划中心。 </payee>
+      </TaxBeanList>
+      <TaxBeanList>
+        <code>221021422101</code>
+        <num>10335439</num>
+        <payee>大连沙河口汇众大建数字技术培训学校。 </payee>
+      </TaxBeanList>
+      <TaxBeanList>
+        <code>221021422101</code>
+        <num>10433174</num>
+        <payee>大连盛林商城有限公司。 </payee>
+      </TaxBeanList>
+      <TaxBeanList>
+        <code>221021422101</code>
+        <num>10572815</num>
+        <payee>大连通利达驾驶员培训学校有限公司。 </payee>
+      </TaxBeanList>
+      <TaxBeanList>
+        <code>221021422101</code>
+        <num>10551645</num>
+        <payee>大连经济技术开发区金源医院有限公司。 </payee>
+      </TaxBeanList>
+      <TaxBeanList>
+        <code>221021422101</code>
+        <num>10548952</num>
+        <payee>大连开发区佳育文化培训学校。 </payee>
+      </TaxBeanList>
+      <TaxBeanList>
+        <code>221021422101</code>
+        <num>10544186</num>
+        <payee>大连金元大酒店有限公司。 </payee>
+      </TaxBeanList>
+      <TaxBeanList>
+        <code>221021422101</code>
+        <num>10594726</num>
+        <payee>大连经济技术开发区昌临旺客隆连锁有限公司。 </payee>
+      </TaxBeanList>
+      <TaxBeanList>
+        <code>221021422101</code>
+        <num>10359100</num>
+        <payee>大连市沙河口区瑞威饭庄。 </payee>
+      </TaxBeanList>
+      <TaxBeanList>
+        <code>221021422101</code>
+        <num>10358754</num>
+        <payee>大连鼎龙健身俱乐部有限公司和平广场店。 </payee>
+      </TaxBeanList>
+      <TaxBeanList>
+        <code>221021422101</code>
+        <num>10348920</num>
+        <payee>大连市沙河口区紫荆香港式茶餐厅。 </payee>
+      </TaxBeanList>
+      <TaxBeanList>
+        <code>221021422101</code>
+        <num>10348286</num>
+        <payee>大连市沙河口区韩正园烤肉西南路店。 </payee>
+      </TaxBeanList>
+      <TaxBeanList>
+        <code>221021422101</code>
+        <num>10344310</num>
+        <payee>大连沙河口佳音文化技术培训学校。 </payee>
+      </TaxBeanList>
+      <TaxBeanList>
+        <code>221021422101</code>
+        <num>11040381</num>
+        <payee>大连市中山区嘉嘉菜馆港湾分店。 </payee>
+      </TaxBeanList>
+      <TaxBeanList>
+        <code>221021422101</code>
+        <num>10600995</num>
+        <payee>大连好益家购物有限公司。 </payee>
+      </TaxBeanList>
+      <TaxBeanList>
+        <code>221021422101</code>
+        <num>10606922</num>
+        <payee>大连元和商贸有限公司。 </payee>
+      </TaxBeanList>
+      <TaxBeanList>
+        <code>221021422101</code>
+        <num>10617819</num>
+        <payee>大连中庚物业管理有限公司。 </payee>
+      </TaxBeanList>
+      <TaxBeanList>
+        <code>221021422101</code>
+        <num>10627003</num>
+        <payee>大连康泰老年休闲园有限公司。 </payee>
+      </TaxBeanList>
+      <TaxBeanList>
+        <code>221021422101</code>
+        <num>10708353</num>
+        <payee>大连营城子建材大市场有限公司。 </payee>
+      </TaxBeanList>
+      <TaxBeanList>
+        <code>221021422101</code>
+        <num>10760168</num>
+        <payee>大连翠峰苑新胜餐饮有限公司。 </payee>
+      </TaxBeanList>
+      <TaxBeanList>
+        <code>221021422101</code>
+        <num>10790050</num>
+        <payee>亚惠美食有限公司大连锦辉美食广场。 </payee>
+      </TaxBeanList>
+      <TaxBeanList>
+        <code>221021422101</code>
+        <num>11026833</num>
+        <payee>大连友谊物业服务有限公司。 </payee>
+      </TaxBeanList>
+      <TaxBeanList>
+        <code>221021422101</code>
+        <num>11031414</num>
+        <payee>大连松山炉炭火烤肉有限公司。 </payee>
+      </TaxBeanList>
+      <TaxBeanList>
+        <code>221021422101</code>
+        <num>11036885</num>
+        <payee>大连市中山区公证处。 </payee>
+      </TaxBeanList>
+      <TaxBeanList>
+        <code>221021322102</code>
+        <num>22881783</num>
+        <payee>大连远洋运输公司。 </payee>
+      </TaxBeanList>
+      <TaxBeanList>
+        <code>221021322102</code>
+        <num>23411042</num>
+        <payee>大连明珠汇酒店管理有限公司。 </payee>
+      </TaxBeanList>
+      <TaxBeanList>
+        <code>221021322102</code>
+        <num>23925782</num>
+        <payee>普兰店市鑫凤精品商厦。 </payee>
+      </TaxBeanList>
+      <TaxBeanList>
+        <code>221021322102</code>
+        <num>23860694</num>
+        <payee>长海县长山饭店。 </payee>
+      </TaxBeanList>
+      <TaxBeanList>
+        <code>221021322102</code>
+        <num>23859550</num>
+        <payee>长海机动车检测中心。 </payee>
+      </TaxBeanList>
+      <TaxBeanList>
+        <code>221021322102</code>
+        <num>23837448</num>
+        <payee>大连港通信工程有限公司。 </payee>
+      </TaxBeanList>
+      <TaxBeanList>
+        <code>221021322102</code>
+        <num>23986689</num>
+        <payee>大连市住房置业担保有限公司。 </payee>
+      </TaxBeanList>
+      <TaxBeanList>
+        <code>221021322102</code>
+        <num>23046752</num>
+        <payee>大连隆新人力资源服务中心。 </payee>
+      </TaxBeanList>
+      <TaxBeanList>
+        <code>221021322102</code>
+        <num>22233469</num>
+        <payee>大连何氏眼科医院。 </payee>
+      </TaxBeanList>
+      <TaxBeanList>
+        <code>221021322102</code>
+        <num>21568905</num>
+        <payee>大连英邦物业管理有限公司。 </payee>
+      </TaxBeanList>
+      <TaxBeanList>
+        <code>221021322102</code>
+        <num>20143131</num>
+        <payee>大连民兴房地产发展有限公司。 </payee>
+      </TaxBeanList>
+      <TaxBeanList>
+        <code>221021322102</code>
+        <num>18904949</num>
+        <payee>大连经济技术开发区昌临旺客隆连锁有限公司安盛商务酒店。 </payee>
+      </TaxBeanList>
+      <TaxBeanList>
+        <code>221021322102</code>
+        <num>18890782</num>
+        <payee>大连经济技术开发区长青墓园管理有限公司。 </payee>
+      </TaxBeanList>
+      <TaxBeanList>
+        <code>221021322102</code>
+        <num>24351702</num>
+        <payee>联程旅游发展（大连）有限公司。 </payee>
+      </TaxBeanList>
+      <TaxBeanList>
+        <code>221021322102</code>
+        <num>24362436</num>
+        <payee>大连交通汽车技术职业培训学校。 </payee>
+      </TaxBeanList>
+      <TaxBeanList>
+        <code>221021322102</code>
+        <num>24357461</num>
+        <payee>大连古莲国际旅行社有限公司。 </payee>
+      </TaxBeanList>
+      <TaxBeanList>
+        <code>221021322102</code>
+        <num>24353572</num>
+        <payee>大连市西岗区香锦香园街酒楼。 </payee>
+      </TaxBeanList>
+      <TaxBeanList>
+        <code>221021322102</code>
+        <num>24352072</num>
+        <payee>大连富佳物业管理有限公司。 </payee>
+      </TaxBeanList>
+      <TaxBeanList>
+        <code>221021322102</code>
+        <num>23998239</num>
+        <payee>大连市中山区老虎滩品海楼酒店。 </payee>
+      </TaxBeanList>
+      <TaxBeanList>
+        <code>221021322102</code>
+        <num>24300470</num>
+        <payee>大连市西岗区一心烤肉店。 </payee>
+      </TaxBeanList>
+      <TaxBeanList>
+        <code>221021322102</code>
+        <num>24288189</num>
+        <payee>瑞家装饰（大连）地产代理有限公司。 </payee>
+      </TaxBeanList>
+      <TaxBeanList>
+        <code>221021322102</code>
+        <num>24284162</num>
+        <payee>大连市西岗区星海医院。 </payee>
+      </TaxBeanList>
+      <TaxBeanList>
+        <code>221021322102</code>
+        <num>24264829</num>
+        <payee>大连仲夏花园酒店。 </payee>
+      </TaxBeanList>
+      <TaxBeanList>
+        <code>221021322102</code>
+        <num>24230806</num>
+        <payee>大连市西岗区大梁骨头美食广场。 </payee>
+      </TaxBeanList>
+      <TaxBeanList>
+        <code>221021322102</code>
+        <num>24368466</num>
+        <payee>大连万达物业管理有限公司。 </payee>
+      </TaxBeanList>
+      <TaxBeanList>
+        <code>221021322102</code>
+        <num>18528455</num>
+        <payee>大连甘井子汇众小额贷款有限公司。 </payee>
+      </TaxBeanList>
+      <TaxBeanList>
+        <code>221021322102</code>
+        <num>18768907</num>
+        <payee>大连市嘉德物业管理有限公司。 </payee>
+      </TaxBeanList>
+      <TaxBeanList>
+        <code>221021322102</code>
+        <num>18753749</num>
+        <payee>大连地一城商业管理有限公司。 </payee>
+      </TaxBeanList>
+      <TaxBeanList>
+        <code>221021322102</code>
+        <num>18740391</num>
+        <payee>大连铭洁环境卫生管理有限公司。 </payee>
+      </TaxBeanList>
+      <TaxBeanList>
+        <code>221021322102</code>
+        <num>18556293</num>
+        <payee>大连乔山墓园服务公司。 </payee>
+      </TaxBeanList>
+      <TaxBeanList>
+        <code>221021322102</code>
+        <num>18780119</num>
+        <payee>大连市阿尔滨金山宾馆有限公司。 </payee>
+      </TaxBeanList>
+      <TaxBeanList>
+        <code>221021322102</code>
+        <num>18468952</num>
+        <payee>大商股份有限公司大商超级市场瓦房店西环街店。 </payee>
+      </TaxBeanList>
+      <TaxBeanList>
+        <code>221021322102</code>
+        <num>18347814</num>
+        <payee>瓦房店虹桥温泉宾馆有限公司。 </payee>
+      </TaxBeanList>
+      <TaxBeanList>
+        <code>221021322102</code>
+        <num>18343299</num>
+        <payee>瓦房店市职业教育中心驾驶员培训有限公司。 </payee>
+      </TaxBeanList>
+      <TaxBeanList>
+        <code>221021322102</code>
+        <num>15327324</num>
+        <payee>大连金地物业管理有限公司。 </payee>
+      </TaxBeanList>
+      <TaxBeanList>
+        <code>221021322102</code>
+        <num>11766943</num>
+        <payee>大连大拍拍卖有限公司。 </payee>
+      </TaxBeanList>
+      <TaxBeanList>
+        <code>221021322102</code>
+        <num>18833714</num>
+        <payee>瓦房店市蔡府酱骨餐饮店。 </payee>
+      </TaxBeanList>
+      <TaxBeanList>
+        <code>221021322102</code>
+        <num>18806905</num>
+        <payee>瓦房店市岗店街道何鲜菇火锅城。 </payee>
+      </TaxBeanList>
+      <TaxBeanList>
+        <code>221021322102</code>
+        <num>18811021</num>
+        <payee>瓦房店市福禄寿大酒店。 </payee>
+      </TaxBeanList>
+      <TaxBeanList>
+        <code>221021322102</code>
+        <num>18815617</num>
+        <payee>瓦房店市机动车综合性能检测有限公司。 </payee>
+      </TaxBeanList>
+      <TaxBeanList>
+        <code>221021322102</code>
+        <num>18817841</num>
+        <payee>瓦房店亿达实业有限公司。 </payee>
+      </TaxBeanList>
+      <TaxBeanList>
+        <code>221021322102</code>
+        <num>18823098</num>
+        <payee>瓦房店市旧机动车交易市场有限公司。 </payee>
+      </TaxBeanList>
+      <TaxBeanList>
+        <code>221021322102</code>
+        <num>18825422</num>
+        <payee>辽宁润达集团瓦房店轿车修配有限公司。 </payee>
+      </TaxBeanList>
+      <TaxBeanList>
+        <code>221021322102</code>
+        <num>18829587</num>
+        <payee>大连润平物业管理有限责任公司。 </payee>
+      </TaxBeanList>
+      <TaxBeanList>
+        <code>221021322102</code>
+        <num>18830484</num>
+        <payee>瓦房店市瓦国小镇臻之味餐厅。 </payee>
+      </TaxBeanList>
+      <TaxBeanList>
+        <code>221021322102</code>
+        <num>18830987</num>
+        <payee>瓦房店市上岛咖啡店。 </payee>
+      </TaxBeanList>
+      <TaxBeanList>
+        <code>221021322102</code>
+        <num>18832911</num>
+        <payee>瓦房店市祝华街道鑫源鱼馆。 </payee>
+      </TaxBeanList>
+      <TaxBeanList>
+        <code>221021322102</code>
+        <num>27819521</num>
+        <payee>大连高新园区融泰小额贷款有限公司。 </payee>
+      </TaxBeanList>
+      <TaxBeanList>
+        <code>221021322102</code>
+        <num>24939223</num>
+        <payee>大连市甘井子区迎客路翠峰苑火锅店。 </payee>
+      </TaxBeanList>
+      <TaxBeanList>
+        <code>221021322102</code>
+        <num>25155326</num>
+        <payee>誉霖鼎信财富投资管理(大连)有限公司。 </payee>
+      </TaxBeanList>
+      <TaxBeanList>
+        <code>221021322102</code>
+        <num>24969973</num>
+        <payee>大连交通国际旅行社有限公司。 </payee>
+      </TaxBeanList>
+      <TaxBeanList>
+        <code>221021322102</code>
+        <num>24969212</num>
+        <payee>大连市汽车贸易集团有限公司。 </payee>
+      </TaxBeanList>
+      <TaxBeanList>
+        <code>221021322102</code>
+        <num>24956984</num>
+        <payee>大连世达购物广场有限公司开发区店。 </payee>
+      </TaxBeanList>
+      <TaxBeanList>
+        <code>221021322102</code>
+        <num>25269150</num>
+        <payee>大连市沙河口房地产经营有限公司。 </payee>
+      </TaxBeanList>
+      <TaxBeanList>
+        <code>221021322102</code>
+        <num>24934432</num>
+        <payee>大连圣韬房地产开发有限公司。 </payee>
+      </TaxBeanList>
+      <TaxBeanList>
+        <code>221021322102</code>
+        <num>24924718</num>
+        <payee>大连金桥高级中学。 </payee>
+      </TaxBeanList>
+      <TaxBeanList>
+        <code>221021322102</code>
+        <num>24921323</num>
+        <payee>大连棒棰岛泡崖再生资源调剂市场。 </payee>
+      </TaxBeanList>
+      <TaxBeanList>
+        <code>221021322102</code>
+        <num>24913236</num>
+        <payee>大连四方通驾驶员培训有限公司。 </payee>
+      </TaxBeanList>
+      <TaxBeanList>
+        <code>221021322102</code>
+        <num>24905405</num>
+        <payee>大连盛铭资产管理有限公司。 </payee>
+      </TaxBeanList>
+      <TaxBeanList>
+        <code>221021322102</code>
+        <num>24901880</num>
+        <payee>沃尔玛(大连)商业零售有限公司。 </payee>
+      </TaxBeanList>
+      <TaxBeanList>
+        <code>221021322102</code>
+        <num>25307886</num>
+        <payee>大连新华大酒店有限公司。 </payee>
+      </TaxBeanList>
+      <TaxBeanList>
+        <code>221021322102</code>
+        <num>25992396</num>
+        <payee>恒利丰商城（大连）有限公司。 </payee>
+      </TaxBeanList>
+      <TaxBeanList>
+        <code>221021322102</code>
+        <num>26041986</num>
+        <payee>广东中奥物业管理有限公司大连分公司。 </payee>
+      </TaxBeanList>
+      <TaxBeanList>
+        <code>221021322102</code>
+        <num>26775158</num>
+        <payee>大连龙威物业管理有限公司。 </payee>
+      </TaxBeanList>
+      <TaxBeanList>
+        <code>221021322102</code>
+        <num>26775897</num>
+        <payee>大连经济技术开发区印象巴蜀传说酒店。 </payee>
+      </TaxBeanList>
+      <TaxBeanList>
+        <code>221021322102</code>
+        <num>27484813</num>
+        <payee>大连东特商业发展有限公司。 </payee>
+      </TaxBeanList>
+      <TaxBeanList>
+        <code>221021322102</code>
+        <num>27527546</num>
+        <payee>大连福佳新天地广场物业管理有限公司。 </payee>
+      </TaxBeanList>
+      <TaxBeanList>
+        <code>221021322102</code>
+        <num>27579937</num>
+        <payee>大连金汉斯餐饮有限公司开发区分公司。 </payee>
+      </TaxBeanList>
+      <TaxBeanList>
+        <code>221021322102</code>
+        <num>27587918</num>
+        <payee>大连经济技术开发区东城园华晟山城火锅店。 </payee>
+      </TaxBeanList>
+      <TaxBeanList>
+        <code>221021322102</code>
+        <num>27655888</num>
+        <payee>瓦房店市龙山墓园。 </payee>
+      </TaxBeanList>
+      <TaxBeanList>
+        <code>221021322102</code>
+        <num>24372862</num>
+        <payee>大连西岗青虹中医门诊部。 </payee>
+      </TaxBeanList>
+      <TaxBeanList>
+        <code>221021322102</code>
+        <num>24401007</num>
+        <payee>大连振富房屋开发有限公司。 </payee>
+      </TaxBeanList>
+      <TaxBeanList>
+        <code>221021322102</code>
+        <num>24423734</num>
+        <payee>大连安鑫房地产代理有限公司。 </payee>
+      </TaxBeanList>
+      <TaxBeanList>
+        <code>221021322102</code>
+        <num>24421313</num>
+        <payee>大连市西岗区香锦酒楼。 </payee>
+      </TaxBeanList>
+      <TaxBeanList>
+        <code>221021322102</code>
+        <num>24409708</num>
+        <payee>大连万达广场商业管理有限公司高新分公司。 </payee>
+      </TaxBeanList>
+      <TaxBeanList>
+        <code>221021322102</code>
+        <num>24403291</num>
+        <payee>大连神谷中医医院有限公司。 </payee>
+      </TaxBeanList>
+      <TaxBeanList>
+        <code>221021322102</code>
+        <num>24432405</num>
+        <payee>大连日东物业管理有限公司。 </payee>
+      </TaxBeanList>
+      <TaxBeanList>
+        <code>221021322102</code>
+        <num>24397728</num>
+        <payee>大连西岗雅典娜外语培训学校。 </payee>
+      </TaxBeanList>
+      <TaxBeanList>
+        <code>221021322102</code>
+        <num>24394595</num>
+        <payee>大连市西岗区万品斑鱼府。 </payee>
+      </TaxBeanList>
+      <TaxBeanList>
+        <code>221021322102</code>
+        <num>24387584</num>
+        <payee>大连珠江国际大厦有限公司。 </payee>
+      </TaxBeanList>
+      <TaxBeanList>
+        <code>221021322102</code>
+        <num>24385312</num>
+        <payee>大连市西岗区东北亚饺子城。 </payee>
+      </TaxBeanList>
+      <TaxBeanList>
+        <code>221021322102</code>
+        <num>24381416</num>
+        <payee>大连远洋基业物业管理有限公司大连分公司。 </payee>
+      </TaxBeanList>
+      <TaxBeanList>
+        <code>221021322102</code>
+        <num>24890221</num>
+        <payee>大连东昌物业管理有限公司华锦铭苑分公司。 </payee>
+      </TaxBeanList>
+      <TaxBeanList>
+        <code>221021322102</code>
+        <num>24590325</num>
+        <payee>大连开利物业管理有限公司。 </payee>
+      </TaxBeanList>
+      <TaxBeanList>
+        <code>221021322102</code>
+        <num>24677417</num>
+        <payee>大连香格里拉酒店有限公司。 </payee>
+      </TaxBeanList>
+      <TaxBeanList>
+        <code>221021322102</code>
+        <num>24731418</num>
+        <payee>大连中山韦博语言培训学校。 </payee>
+      </TaxBeanList>
+      <TaxBeanList>
+        <code>221021322102</code>
+        <num>24772263</num>
+        <payee>大连市中山区骑士咖啡厅。 </payee>
+      </TaxBeanList>
+      <TaxBeanList>
+        <code>221021322102</code>
+        <num>24780066</num>
+        <payee>大连市中山区爱锅者火锅店。 </payee>
+      </TaxBeanList>
+      <TaxBeanList>
+        <code>221021322102</code>
+        <num>24792115</num>
+        <payee>大连东来国际旅行社有限公司。 </payee>
+      </TaxBeanList>
+      <TaxBeanList>
+        <code>221021322102</code>
+        <num>24792350</num>
+        <payee>大连市中山区名典咖啡语茶西餐厅。 </payee>
+      </TaxBeanList>
+      <TaxBeanList>
+        <code>221021322102</code>
+        <num>24815658</num>
+        <payee>大连友谊购物广场发展有限公司。 </payee>
+      </TaxBeanList>
+      <TaxBeanList>
+        <code>221021322102</code>
+        <num>24837401</num>
+        <payee>大连心悦大酒店有限公司。 </payee>
+      </TaxBeanList>
+      <TaxBeanList>
+        <code>221021322102</code>
+        <num>24866388</num>
+        <payee>大连康佰俪健身有限公司民主分公司。 </payee>
+      </TaxBeanList>
+    </list>
+  </TaxBean>
+</list>
