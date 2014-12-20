@@ -14,6 +14,7 @@ import org.weixin.course.message.resp.NewsMessage;
 import org.weixin.course.message.resp.TextMessage;
 import org.weixin.course.service.caipiao.CaipiaoService;
 import org.weixin.course.service.history.TodayInHistoryService;
+import org.weixin.course.service.humorous.HumorousService;
 import org.weixin.course.service.menu.MenuContent;
 import org.weixin.course.service.tax.TaxService;
 import org.weixin.course.service.weather.WeatherService;
@@ -162,7 +163,9 @@ public class CoreService {
 		            newsMessage.setArticles(articleList);
 
 		            return SignUtil.encryptMsg(MessageUtil.newsMessageToXml(newsMessage), nonce, timestamp);
-					
+				
+				} else if (reqContent.equals("9")) {
+					respContent = HumorousService.getHumorousInfor();
 				} else {
 					respContent = "您发送的是文本消息！";
 				}
