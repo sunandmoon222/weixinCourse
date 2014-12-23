@@ -15,6 +15,7 @@ import org.weixin.course.message.resp.TextMessage;
 import org.weixin.course.service.caipiao.CaipiaoService;
 import org.weixin.course.service.history.TodayInHistoryService;
 import org.weixin.course.service.humorous.HumorousService;
+import org.weixin.course.service.location.LocationService;
 import org.weixin.course.service.menu.MenuContent;
 import org.weixin.course.service.tax.TaxService;
 import org.weixin.course.service.weather.WeatherService;
@@ -166,6 +167,8 @@ public class CoreService {
 				
 				} else if (reqContent.equals("9")) {
 					respContent = HumorousService.getHumorousInfor();
+				} else if (reqContent.equals("10")) {
+					respContent = "小熊要先知道亲的具体位置后，才能为亲服务呢~~\n" + "请先点击窗口底部的“+”按钮，选择“位置”，点“发送”";
 				} else {
 					respContent = "您发送的是文本消息！";
 				}
@@ -176,7 +179,24 @@ public class CoreService {
 			}
 			// 地理位置消息
 			else if (msgType.equals(MessageUtil.REQ_MESSAGE_TYPE_LOCATION)) {
-				respContent = "您发送的是地理位置消息！";
+				String location_x = requestMap.get("Location_X");
+                String location_y = requestMap.get("Location_Y");
+                String location = LocationService.getBaiDuLocationXY(location_x,location_y);
+				
+	            List<Article> articleList = LocationService.getLocationInfor(location);
+	            
+	            NewsMessage newsMessage = new NewsMessage();
+
+	            newsMessage.setToUserName(fromUserName);
+	            newsMessage.setFromUserName(toUserName);
+	            newsMessage.setCreateTime(new Date().getTime());
+	            newsMessage.setMsgType("news");
+	            newsMessage.setFuncFlag(0);
+
+	            newsMessage.setArticleCount(articleList.size());
+	            newsMessage.setArticles(articleList);
+
+	            return SignUtil.encryptMsg(MessageUtil.newsMessageToXml(newsMessage), nonce, timestamp);
 			}
 			// 链接消息
 			else if (msgType.equals(MessageUtil.REQ_MESSAGE_TYPE_LINK)) {
