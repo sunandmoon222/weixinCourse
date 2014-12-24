@@ -16,10 +16,10 @@ public class MenuContent {
 		buffer.append("4  体育彩票彩票").append("\n");
 		buffer.append("<a href=\"http://wzcx.runsky.com\">5 违章查询</a>").append("\n");
 		buffer.append("6 历史上的今天").append("\n");
-		buffer.append("7  人脸识别").append("\n");
+		buffer.append("7 人脸识别").append("\n");
 		buffer.append("8 大连地区发票中奖查询 ").append("\n");
 		buffer.append("9 幽默笑话").append("\n");
-		buffer.append("<a href=\"www.xutian-technology.com/weixinCourse_sp/place/init.do\">10 附近周边</a>").append("\n\n");
+		buffer.append("10 附近周边").append("\n\n");
 		buffer.append("回复“?”显示此帮助菜单");
 		return buffer.toString();
 	}

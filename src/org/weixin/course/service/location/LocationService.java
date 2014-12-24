@@ -22,17 +22,30 @@ import sun.misc.BASE64Decoder;
 public class LocationService {
 
 
-	public static List<Article> getLocationInfor(String location) {
+	public static List<Article> getLocationInfor(String location,String beforeLocation_x,String beforeLocation_y) {
 		
 		String[] locationTemp = location.split("\\|");
 		Calendar cal = Calendar.getInstance();
 		cal.setTime(new Date());
+		StringBuffer buff = new StringBuffer();
+		buff.append("经过熊大的测算，亲附近有：\n")
+			.append("1个加油站2台ATM3家电影院4个超市\n5家火锅店6家烧烤店7家洗浴8家KTV\n9家旅店真是十全十美啊"+ emoji(0X1F37A)+ emoji(0X1F3A4)+ emoji(0X1F366)+ emoji(0X1F498))
+			.append("\n\n")
+			.append("快快点我查看详情"+ emoji(0X1F449))
+			.append("\n")
+			.append("祝亲玩的愉快~~"+ emoji(0X1F37B));
+		
+		buff.append("\n\n\n");
+		buff.append("变换前坐标:"+ "x:"+beforeLocation_x + "\n");
+		buff.append("变换前坐标:"+ "y:"+beforeLocation_y + "\n");
+		buff.append("变换后坐标:"+ "x:"+locationTemp[0] + "\n");
+		buff.append("变换后坐标:"+ "y:"+locationTemp[1] + "\n");
 		
 		List<Article> list = new ArrayList<Article>(1);
 
 		Article article = new Article();
-		article.setTitle("地理位置");
-		article.setDescription("想看看你周围有哪儿些好吃的，好玩的么，快快点我把~~~");
+		article.setTitle("谢谢亲的配合哦~~");
+		article.setDescription(buff.toString());
 		article.setPicUrl("");
 		article.setUrl("http://www.xutian-technology.com:8080/weixinCourse_sp/place/init.do?location_x="+locationTemp[0]+"&location_y="+locationTemp[1]);
 
@@ -96,4 +109,14 @@ public class LocationService {
 		}
 		return buffer.toString();
 	}
+	
+    /** 
+     * emoji表情转换(hex -> utf-16) 
+     *  
+     * @param hexEmoji 
+     * @return 
+     */  
+    public static String emoji(int hexEmoji) {  
+        return String.valueOf(Character.toChars(hexEmoji));  
+    } 
 }

@@ -168,7 +168,7 @@ public class CoreService {
 				} else if (reqContent.equals("9")) {
 					respContent = HumorousService.getHumorousInfor();
 				} else if (reqContent.equals("10")) {
-					respContent = "小熊要先知道亲的具体位置后，才能为亲服务呢~~\n" + "请先点击窗口底部的“+”按钮，选择“位置”，点“发送”";
+					respContent = "熊大要先知您道方位，\n才能为亲服务呢~~\n\n" + "请先点击右下角\"+\"按钮，选择\"位置\"，点\"发送\"";
 				} else {
 					respContent = "您发送的是文本消息！";
 				}
@@ -183,7 +183,7 @@ public class CoreService {
                 String location_y = requestMap.get("Location_Y");
                 String location = LocationService.getBaiDuLocationXY(location_x,location_y);
 				
-	            List<Article> articleList = LocationService.getLocationInfor(location);
+	            List<Article> articleList = LocationService.getLocationInfor(location,location_x,location_y);
 	            
 	            NewsMessage newsMessage = new NewsMessage();
 
