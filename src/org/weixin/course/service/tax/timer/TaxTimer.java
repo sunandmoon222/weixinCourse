@@ -56,45 +56,57 @@ public class TaxTimer {
 						if (m.group(2).equals("60万")) {
 							taxBean.setId("一等奖");
 							taxBean.setCount(m.group(1));
+							taxBean.setBound("600,000元");
 						} else if (m.group(2).equals("20万")) {
 							list.add(taxBean);
 							taxBean = new TaxBean();
 							taxBean.setId("二等奖");
+							taxBean.setBound("200,000元");
 						} else if (m.group(2).equals("10万")) {
 							list.add(taxBean);
 							taxBean = new TaxBean();
 							taxBean.setId("三等奖");
+							taxBean.setBound("100,000元");
 						} else if (m.group(2).equals("5万")) {
 							list.add(taxBean);
 							taxBean = new TaxBean();
 							taxBean.setId("四等奖");
+							taxBean.setBound("50,000元");
 						} else if (m.group(2).equals("1万")) {
 							list.add(taxBean);
 							taxBean = new TaxBean();
 							taxBean.setId("五等奖");
+							taxBean.setBound("10,000元");
 						} else if (m.group(2).equals("5千")) {
 							list.add(taxBean);
 							taxBean = new TaxBean();
 							taxBean.setId("六等奖");
+							taxBean.setBound("5,000元");
 						} else if (m.group(2).equals("1千")) {
 							list.add(taxBean);
 							taxBean = new TaxBean();
 							taxBean.setId("七等奖");
+							taxBean.setBound("1,000元");
 						}
 
 						taxBean.setCount(m.group(1));
 					}
+				} else if (str.contains("Year=")) {
+					taxBean.setYear(str.replace("Year=", ""));
+				} else if (str.contains("Month=")) {
+					taxBean.setMonth(str.replace("Month=", ""));
 				} else {
 					TaxBeanList taxBeanData = new TaxBeanList();
 
 					p = Pattern
-							.compile(".*发票代码：([0-9]*).*发票号码：([0-9]*).*收款方名称：(.*)");
+							.compile(".*发票名称：(.*)；发票代码：([0-9]*).*发票号码：([0-9]*).*收款方名称：(.*)");
 					m = p.matcher(str);
 
 					while (m.find()) {
-						taxBeanData.setCode(m.group(1));
-						taxBeanData.setNum(m.group(2));
-						taxBeanData.setPayee(m.group(3));
+						taxBeanData.setName(m.group(1));
+						taxBeanData.setCode(m.group(2));
+						taxBeanData.setNum(m.group(3));
+						taxBeanData.setPayee(m.group(4));
 					}
 					taxBean.getList().add(taxBeanData);
 				}

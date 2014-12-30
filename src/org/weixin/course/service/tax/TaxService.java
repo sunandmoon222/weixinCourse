@@ -28,7 +28,7 @@ public class TaxService {
 		article.setTitle(cal.get(Calendar.YEAR)+"年第"+ getRealMonth(cal.get(Calendar.MONTH)) +"期发票摇奖结果");
 		article.setDescription(getXmlInfo());
 		article.setPicUrl("");
-		article.setUrl("http://www.xutian-technology.com:8080/weixinCourse_sp/tax/query.do");
+		article.setUrl("http://www.xutian-technology.com:8080/weixinCourse_sp/tax/init.do");
 
 		list.add(article);
 		return list;
